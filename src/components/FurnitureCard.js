@@ -2,28 +2,14 @@ import React, { Component } from 'react';
 
 export default class FurnitureCard extends Component {
 
-    // renderItem = () => {
-    //     return this.props.info.map(item => 
-    //         <div className="item-card">
-    //             <div className="item-info">
-    //                 <img className="card-pic" src={item.image} alt={item.name}></img>
-    //                 <p>{item.name}</p>
-    //                 <p>${item.price}</p>
-    //                 <p>{item.rating} out of 5</p>
-    //                 <button className="add-cart-btn" onClick={() => this.props.addToCart(item.id)}>Add to Cart</button>
-    //             </div>
-    //         </div>
-    //     )
-    // }
+    state = {
+        quantity: 1
+    }
 
-    // render() {
-    //     return (
-    //         <div>
-    //             {this.renderItem()}
-    //         </div>
-    //     )
-    // }
-
+    changeHandler = (event) => {
+        event.persist()
+        this.setState(()=> ({[event.target.name]: event.target.value}))
+    }
 
     render () {
         const { id, room, category, price, name, color, rating, image} = this.props.info
@@ -35,7 +21,11 @@ export default class FurnitureCard extends Component {
                     <p>{name}</p>
                     <p>${price}</p>
                     <p>{rating} out of 5</p>
-                    <button className="add-cart-btn" onClick={() => this.props.addToCart(id)}>Add to Cart</button>
+                    <form className="add-form" onSubmit={(event) => this.props.addToCart(this.props.info, event, this.state.quantity)}>
+                        <label htmlFor="quantity">Quantity</label>
+                        <input id="quantity" name="quantity" type="number" min="1" max="10" value={this.state.quantity} onChange={this.changeHandler}/>
+                        <button className="add-cart-btn" type="submit">Add to Cart</button>
+                    </form>
                 </div>
             </div>
         )
