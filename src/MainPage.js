@@ -4,7 +4,9 @@ export default class MainPage extends Component {
 
     render() {
         return (
-            <h1>this is the main page</h1>
+            <div className="home-container">
+                <h1>this is the main page</h1>
+            </div>
         )
     }
 }

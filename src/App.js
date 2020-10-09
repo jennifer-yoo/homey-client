@@ -12,7 +12,8 @@ class App extends Component {
   state = {
     data: [],
     cart: [],
-    orderId: null
+    orderId: null,
+    quantity: 1
 }
 
   componentDidMount () {
@@ -24,56 +25,63 @@ class App extends Component {
   }
 
   addToCart = (obj, event, quantity) => {
+    event.persist()
     event.preventDefault()
 
     let foundObj = [...this.state.data].find(el => el.id === obj.id)
-    let foundId = foundObj.id
+    // let foundId = foundObj.id
+
+    this.setState({ cart: [...this.state.cart, foundObj]})
+    this.setState({ quantity: quantity})
+    localStorage.setItem("cartItem", foundObj)
+
     // let orderId = localStorage.getItem("orderId")
 
-    console.log(obj, quantity)
+    // console.log(obj, quantity)
 
-    if ( this.state.orderId === null ) {
-      // localStorage.clear()
+    // if ( this.state.orderId === null ) {
+    //   // localStorage.clear()
+    //   console.log("this is second if statement")
 
-      fetch('http://localhost:3001/orders', {
-        method: 'POST',
-        headers: {
-          "content-type": "application/json",
-          "accept": "application/json"
-        },
-        body: JSON.stringify({
-          user_id: 1
-        })
-      })
-      .then(resp => resp.json())
-      .then(data => {
-        console.log("order id:", data.id)
-        console.log("order", data)
-        this.setState({ orderId: data.id})
-        localStorage.setItem("orderId", data.id)
-      })
-    }
+    //   fetch('http://localhost:3001/orders', {
+    //     method: 'POST',
+    //     headers: {
+    //       "content-type": "application/json",
+    //       "accept": "application/json"
+    //     },
+    //     body: JSON.stringify({
+    //       user_id: 1
+    //     })
+    //   })
+    //   .then(resp => resp.json())
+    //   .then(data => {
+    //     console.log("order id:", data.id)
+    //     console.log("order", data)
+    //     this.setState({ orderId: data.id})
+    //     localStorage.setItem("orderId", data.id)
+    //   })
+    // }
+    // if (this.state.orderId !== null) {
+    //   console.log("this is second if statement")
+    //   let orderId = this.state.orderId
 
-    if (this.state.orderId !== null) {
-      let orderId = this.state.orderId
-
-      fetch('http://localhost:3001/units', {
-        method: 'POST',
-        headers: {
-          "content-type": "application/json",
-          "accept": "application/json"
-        },
-        body: JSON.stringify({
-          order_id: orderId,
-          furniture_id: foundId
-        })
-      })
-      .then(resp => resp.json())
-      .then(data => {
-        console.log(data)
-        this.setState({ cart: [...this.state.cart, data] })
-      })
-    } 
+    //   fetch('http://localhost:3001/units', {
+    //     method: 'POST',
+    //     headers: {
+    //       "content-type": "application/json",
+    //       "accept": "application/json"
+    //     },
+    //     body: JSON.stringify({
+    //       order_id: orderId,
+    //       furniture_id: foundId
+    //     })
+    //   })
+    //   .then(resp => resp.json())
+    //   .then(data => {
+    //     console.log(data)
+    //     this.setState({ cart: [...this.state.cart, data] })
+    //   })
+    // } 
     
     // else {
     //   if (parseInt(quantity) === 1) {
@@ -129,24 +137,29 @@ class App extends Component {
 
   removeFromCart = (obj) => {
     let cart = [...this.state.cart]
-    let foundObj = cart.find(el => el.id === obj.id)
-    delete foundObj.id
+    let foundObjIndex = cart.findIndex(el => el.id === obj.id)
+    console.log("remove:", foundObjIndex)
+    let newCart = cart.splice(foundObjIndex, 1)
 
-    // let newCart = cart.filter(el => el.id !== foundObj.id)
-    // this.setState({ cart: newCart})
+    console.log("new cart:", newCart)
+    this.setState({ cart: cart})
+  }
+
+  changeHandler = (event) => {
+    event.persist()
+    event.preventDefault()
+    this.setState(()=> ({[event.target.name]: event.target.value}))
   }
 
   render() {
     console.log('in app:', this.state.data)
     return (
       <Router> 
-        <div className='logo'>Homey</div>
         <NavBar />
         <Route exact path='/' component={MainPage} />
         <Route exact path='/design' component={Design} />
-        <Route path='/products' render={(routerProps) => (<FurnitureContainer {...routerProps} info={this.state.data} addToCart={this.addToCart}/> )} />
-        {/* <Route exact path='/products' component={FurnitureContainer} /> */}
-        <Route path='/cart' render={(routerProps) => (<CartContainer {...routerProps} info={this.state.cart} removeFromCart={this.removeFromCart} /> )} />
+        <Route path='/products' render={(routerProps) => (<FurnitureContainer {...routerProps} info={this.state.data} addToCart={this.addToCart} quantity={this.state.quantity} changeHandler={this.changeHandler}/> )} />
+        <Route path='/cart' render={(routerProps) => (<CartContainer {...routerProps} info={this.state.cart} removeFromCart={this.removeFromCart} quantity={this.state.quantity} changeHandler={this.changeHandler}/> )} />
       </Router> 
     );
   }

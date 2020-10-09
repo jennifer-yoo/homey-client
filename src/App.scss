@@ -1,6 +1,51 @@
+
+// .App {
+//     width: 100vw;
+//     height: 100vh;
+// }
+
+.root {
+    position: relative;
+}
+
+header {
+    position: absolute;
+    z-index: 99;
+    width: 50%;
+    padding: 60px;
+    .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        .logo {
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+    }
+}
+
+.design-container{
+    position: absolute;
+    top: 15%;
+}
+
+.furniture-container {
+    position: absolute;
+    top: 25%;
+}
+
 .card-pic {
     width:300px;
     height:300px;
     object-fit:scale-down;
+}
 
+.home-container {
+    position: absolute;
+    top: 15%;
+}
+
+.cart-container {
+    position: absolute;
+    top: 15%;
 }
