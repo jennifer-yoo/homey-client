@@ -63,7 +63,7 @@ class App extends Component {
       })
       .then(resp => resp.json())
       .then(data => {
-        console.log(data)
+        console.log("one add:", data)
         this.setState({ cart: [...this.state.cart, data] })
       })
     } else {
@@ -81,60 +81,16 @@ class App extends Component {
           body: JSON.stringify({
             order_id: orderId,
             furniture_id: foundId
-            
           })
         })
         .then(resp => resp.json())
         .then(data => {
+          console.log("multiple adds:",data)
           this.setState({ cart: [...this.state.cart, data] })        
         })
       }      
     }
-
-    //   if (parseInt(quantity) === 1) {
-    //     fetch('http://localhost:3001/units', {
-    //       method: 'POST',
-    //       headers: {
-    //         "content-type": "application/json",
-    //         "accept": "application/json"
-    //       },
-    //       body: JSON.stringify({
-    //         order_id: orderId,
-    //         furniture_id: foundId
-    //       })
-    //     })
-    //     .then(resp => resp.json())
-    //     .then(data => {
-    //       this.setState({ cart: [...this.state.cart, data] })
-    //     })
-    //   } else {
-
-    //     // let orderId = localStorage.getItem("orderId")
-    //     let orderId = this.state.orderId
-
-    //     fetch('http://localhost:3001/units', {
-    //       method: 'POST',
-    //       headers: {
-    //         "content-type": "application/json",
-    //         "accept": "application/json"
-    //       },
-    //       body: JSON.stringify({
-    //         order_id: orderId,
-    //         furniture_id: foundId
-    //       })
-    //     })
-    //     .then(resp => resp.json())
-    //     .then(data => {
-    //       let array = []
-    //       for (let i = 0; i < parseInt(quantity); i++) {
-    //         array[i] = data
-    //       }
-    //       this.setState({ cart: [...this.state.cart, array] })        
-    //     })
-    //   }
-    // }
   }
-
 
   removeFromCart = (obj) => {
     let cart = [...this.state.cart]
@@ -155,14 +111,14 @@ class App extends Component {
   // }
 
   render() {
-    console.log('cart:', this.state.cart)
+    console.log('in app cart state:', this.state.cart)
     return (
       <Router> 
         <NavBar />
-        <Route exact path='/' component={MainPage} />
+        {/* <Route exact path='/' component={MainPage} /> */}
         <Route exact path='/design' component={Design} />
         <Route path='/products' render={(routerProps) => (<FurnitureContainer {...routerProps} info={this.state.data} addToCart={this.addToCart} changeHandler={this.changeHandler}/> )} />
-        <Route path='/cart' render={(routerProps) => (<CartContainer {...routerProps} info={this.state.cart} quantity={this.state.quantity} removeFromCart={this.removeFromCart} changeHandler={this.changeHandler}/> )} />
+        <Route path='/cart' render={(routerProps) => (<CartContainer {...routerProps} info={this.state.cart} removeFromCart={this.removeFromCart} changeHandler={this.changeHandler}/> )} />
       </Router> 
     );
   }

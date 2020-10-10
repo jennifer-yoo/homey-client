@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
+import CartCard from '../containers/CartCard.js'
 
 export default class CartContainer extends Component {
+
+    // componentDidUpdate(prevProps) {
+    //     if(this.props.info !== prevProps.info) {
+    //         this.fetchData(this.props.info)
+    //     }
+    // }
 
     updateQuantity = () => {
         return <>
@@ -9,36 +16,23 @@ export default class CartContainer extends Component {
         </>
     }
 
-    renderItem = () => {
-        const { info, quantity, removeFromCart } = this.props
+    renderItems = () => {
+        const { info, removeFromCart } = this.props
 
-        let num = parseInt(quantity)
+        let currentCart = [...info]
+        let idArray = []
+        let objArray = []
 
-        if (num === 1) {
-            return info.map(item =>
-                <div className="cart-item">
-                    <img className="card-pic" src={item.furniture.image} alt={item.furniture.name}></img>
-                    <p>{item.furniture.name}</p>
-                    <p>${item.furniture.price}</p>
-                    <button className="cart-remove-btn" onClick={() => removeFromCart(item.furniture)}>Remove</button>
-                    <input id="quantity" name="quantity" type="number" min="1" max="10" value={parseInt(quantity)} onChange={this.props.changeHandler}/>
-                    <button className="cart-update-btn">Update</button>
-                </div> 
-            )
-        } else if (num > 1 || num < 3) {
-            return info[0].map(item => 
-                <div className="cart-item">
-                    <img className="card-pic" src={item.furniture.image} alt={item.furniture.name}></img>
-                    <p>{item.furniture.name}</p>
-                    <p>${item.furniture.price}</p>
-                    <button className="cart-remove-btn" onClick={() => removeFromCart(item.furniture)}>Remove</button>
-                    <input id="quantity" name="quantity" type="number" min="1" max="10" value={parseInt(quantity)} onChange={this.props.changeHandler}/>
-                    <button className="cart-update-btn">Update</button>
-                </div> 
-            )
-        } else {
-            return null
+        for (const item of currentCart) {
+            if (!idArray.includes(item.furniture_id)) {
+                let quantityArray = currentCart.filter(el => el.furniture_id === item.furniture_id)
+                let quantity = quantityArray.length
+                objArray.push(item)
+                idArray.push(item.furniture_id)
+            }
         }
+
+        console.log("objArray:", objArray)
     }
 
     orderTotal = () => {
@@ -47,11 +41,11 @@ export default class CartContainer extends Component {
     }
 
     render() {    
-        console.log(this.props.info)
+        console.log("in cart state:", this.props.info)
         return(
             <div className="cart-container">
                 <div className="cart">
-                    {this.renderItem()}
+                    {this.renderItems()}
                     {/* {this.props.info.map(item => 
                         {item.id === item.id ?
                             <><input id="quantity" name="quantity" type="number" min="1" max="10" value={parseInt(this.props.quantity) + parseInt(this.props.quantity)} onChange={this.props.changeHandler}/>
@@ -65,7 +59,7 @@ export default class CartContainer extends Component {
                     {this.props.info.length === 0 ? 
                         <p>There are no items in your cart</p>
                         :
-                        <p>Total: </p>
+                    <p>Total: ${this.orderTotal()}</p>
                     }
                 </div>
             </div>

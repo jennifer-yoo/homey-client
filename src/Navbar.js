@@ -5,7 +5,7 @@ const NavBar = () => {
   return (
     <header>
       <div className="header-inner">
-        <div className='logo'>HOMEY</div>
+          <p className='logo'>HOMEY</p>
           <NavLink to="/">HOME</NavLink>
           <NavLink to="/design">DESIGN</NavLink>
           <NavLink to="/products">PRODUCTS</NavLink>
