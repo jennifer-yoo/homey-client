@@ -7,7 +7,6 @@ export default class FurnitureShow extends Component {
     }
 
     changeHandler = (event) => {
-        console.log("i am changing")
         event.persist()
         event.preventDefault()
         this.setState(()=> ({[event.target.name]: event.target.value}))
@@ -15,7 +14,6 @@ export default class FurnitureShow extends Component {
 
     render () {
         const { info, addToCart } = this.props
-
         return (
             <div className="item-card">
                 {info ? 
@@ -31,7 +29,7 @@ export default class FurnitureShow extends Component {
                         </form>
                     </div>
                 : 
-                    null
+                null
                 }
             </div>
         )

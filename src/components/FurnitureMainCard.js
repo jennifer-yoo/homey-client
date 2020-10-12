@@ -5,7 +5,6 @@ import { NavLink } from 'react-router-dom';
 export default class FurnitureMainCard extends Component {
 
     render () {        
-        // console.log(this.props.info)
         const {info} = this.props
 
         return (
@@ -18,7 +17,6 @@ export default class FurnitureMainCard extends Component {
                     </div>
                 </div>
             </NavLink>
-
         )
     }
 }

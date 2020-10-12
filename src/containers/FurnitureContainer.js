@@ -3,8 +3,6 @@ import { Switch, Route } from 'react-router-dom';
 import FurnitureMainCard from '../components/FurnitureMainCard'
 import FurnitureShow from '../components/FurnitureShow'
 
-
-
 export default class FurnitureContainer extends Component {
 
     renderItems = () => {
@@ -15,8 +13,6 @@ export default class FurnitureContainer extends Component {
     
     render() {
         const { info, changeHandler, addToCart } = this.props
-        console.log("i am in furn container:", info)
-
         return (
             <div className="furniture-container">
                 <Switch>

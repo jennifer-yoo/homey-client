@@ -15,7 +15,7 @@ header {
         .logo {
             font-weight: 900;
             letter-spacing: 2px;
-            color: white;
+            color: black;
         }
         a::before,
         a::after {
@@ -58,7 +58,7 @@ header {
     text-align: center;
     width: 100%;
     margin: 0 auto;
-    color: white;
+    color: black;
     span {
         display: block;
     }
@@ -116,41 +116,8 @@ header {
 a {
     text-transform: capitalize;
     text-decoration: none;
-    color: white;
+    color: black;
     position: relative;
     padding: .5em .8em;
 }
 
-// a::before,
-// a::after {
-//     content: '';
-//     height: 14px;
-//     width: 14px;
-//     position: absolute;
-//     transition: all .35s ease;
-//     opacity: 0;
-//     }
-// a::before {
-//     content: '';
-//     right: 0;
-//     top: 0;
-//     border-top: 3px solid #292929;
-//     border-right: 3px solid #292929;
-//     transform: translate(-100%, 50%);
-// }
-// a:after {
-//     content: '';
-//     left: 0;
-//     bottom: 0;
-//     border-bottom: 3px solid #292929;
-//     border-left: 3px solid #292929;
-//     transform: translate(100%, -50%)
-// }
-// a:hover:before,
-// a:hover:after{
-//     transform: translate(0,0);
-//     opacity: 1;
-// }
-// a:hover {
-//     color: #292929;
-// }
