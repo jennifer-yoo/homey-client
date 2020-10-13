@@ -6,6 +6,7 @@ import Design from './components/Design'
 import FurnitureContainer from './containers/FurnitureContainer'
 import NavBar from './Navbar.js'
 import CartContainer from './containers/CartContainer'
+import Payment from './components/Payment'
 
 class App extends Component {
 
@@ -191,12 +192,13 @@ class App extends Component {
     console.log('in app order state:', this.state.order)
 
     return (
-      <Router> 
+      <Router className="router"> 
         <NavBar />
         {/* <Route exact path='/' component={MainPage} /> */}
         <Route exact path='/design' component={Design} />
         <Route path='/products' render={(routerProps) => (<FurnitureContainer {...routerProps} info={this.state.data} addToCart={this.addToCart} /> )} />
         <Route path='/cart' render={(routerProps) => (<CartContainer {...routerProps} info={this.state.cart} removeFromCart={this.removeFromCart} updateHandler={this.updateHandler} checkOut={this.checkOut} order={this.state.order}/> )} />
+        <Route path='/checkout' render={(routerProps) => (<Payment {...routerProps} order={this.state.order}/>)} />
       </Router> 
     );
   }

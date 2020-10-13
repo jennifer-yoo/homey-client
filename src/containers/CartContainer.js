@@ -30,43 +30,26 @@ export default class CartContainer extends Component {
         return prices.reduce((result,num) => result+num)
     }
 
+    checkoutPage = () => {
+        return <Payment order={this.props.order} />
+    }
+
     render() {    
         console.log("in cart state:", this.props.info, this.props.match)
         return(
-            
             <div className="cart-container">
-                <Router>
-                        {/* <Route path={this.props.match.url} render={() => 
-                        (console.log("this is my cart"),
-                        <><h2>Your Cart</h2>
-                            <div className="cart">
-                                {this.renderItems()}
-                            </div>
-                            <div className="order-info">
-                                {this.props.info.length === 0 ? 
-                                    <p>There are no items in your cart</p>
-                                    :
-                                    <><p>Total: ${this.orderTotal()}</p>
-                                    <Link to="/checkout">Continue to Checkout</Link></>
-                                }
-                            </div></>)
-                        } /> */}
-                            <>
-                            <h2>Your Cart</h2>
-                            <div className="cart">
-                                {this.renderItems()}
-                            </div>
-                            <div className="order-info">
-                                {this.props.info.length === 0 ? 
-                                    <p>There are no items in your cart</p>
-                                    :
-                                    <><p>Total: ${this.orderTotal()}</p>
-                                    <Link to="/checkout">Continue to Checkout</Link></>
-                                }
-                            </div></>
-
-                        <Route path="/checkout" render={(routerProps) => <Payment {...routerProps} order={this.props.order} />} />
-                </Router>
+                <><h2>Your Cart</h2>
+                    <div className="cart">
+                        {this.renderItems()}
+                    </div>
+                    <div className="order-info">
+                        {this.props.info.length === 0 ? 
+                            <p>There are no items in your cart</p>
+                            :
+                            <><p>Total: ${this.orderTotal()}</p>
+                            <Link to="/checkout">Continue to Checkout</Link></>
+                        }
+                </div></>
             </div>
         )
     }

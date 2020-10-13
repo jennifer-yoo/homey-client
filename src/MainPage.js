@@ -63,7 +63,7 @@ const HTMLContent = ({
     }, [inView]);
     return (
     <Section factor={1.5} offset={1}>
-        <group position={[0, position, 0]}>
+        <group position={[0, position, 10]}>
         <mesh ref={ref} position={[0, -35, 0]}>
             <Model url={modelPath} />
         </mesh>
@@ -103,7 +103,7 @@ export default function MainPage() {
     // useEffect(() => void onScroll({ target: scrollArea.current }), []);
 
     return (
-        <>
+        <div className="main-container">
           {/* R3F Canvas */}
         <Canvas
             concurrent
@@ -148,6 +148,6 @@ export default function MainPage() {
             <div style={{ position: "sticky", top: 0 }} ref={domContent} />
             <div style={{ height: `${state.pages * 100}vh` }} />
         </div> */}
-        </>
+        </div>
     );
 }
