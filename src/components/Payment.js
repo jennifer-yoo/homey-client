@@ -3,15 +3,35 @@ import { NavLink } from 'react-router-dom';
 
 export default class Payment extends Component {
 
-    render() {
-        return (
-            <NavLink to={`/payment`}>
+    state = {
+        name: "",
+        email: "",
+        address: "",
+        apt: "",
+        city: "",
+        usState: "",
+        zip: "",
 
+    }
+
+    changeHandler = (event) => {
+        event.persist()
+        event.preventDefault()
+        this.setState(()=> ({[event.target.name]: event.target.value}))
+    }
+
+    render() {
+        console.log("whatever")
+        return (
             <div className="checkout-container">
                 <div className="billing-container">
+                    <h2>Billing</h2>
                     <form className="billing-form">
                         <label htmlFor="name">Full Name</label>
                         <input id="name" name="name" type="text" value={this.state.name} onChange={this.changeHandler}/>
+
+                        <label htmlFor="email">Email Address</label>
+                        <input id="email" name="email" type="email" value={this.state.email} onChange={this.changeHandler}/>
 
                         <label htmlFor="address">Street Address</label>
                         <input id="address" name="address" type="text" value={this.state.address} onChange={this.changeHandler}/>
@@ -92,10 +112,9 @@ export default class Payment extends Component {
                 </div>
 
                 <div className="payment-container">
-                    <button className="checkout-btn" onClick={() => this.props.checkOut(this.orderTotal())}>Checkout</button>
+                        <button className="checkout-btn" onClick={() => this.props.checkOut(this.orderTotal())}>Place your Order</button>
                 </div>
             </div>
-            </NavLink>
         )
     }
 }

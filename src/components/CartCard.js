@@ -23,8 +23,10 @@ export default class CartCard extends Component {
         const { info, removeFromCart, updateHandler } = this.props
         
         return (
+            
             <div className="cart-item">
-                <img className="card-pic" src={info.furniture.image} alt={info.furniture.name}></img>
+            {info ? 
+                <><img className="card-pic" src={info.furniture.image} alt={info.furniture.name}></img>
                 <p>{info.furniture.name}</p>
                 <p>${info.furniture.price}</p>
                 <button className="cart-remove-btn" onClick={() => removeFromCart(info)}>Remove</button>
@@ -32,7 +34,10 @@ export default class CartCard extends Component {
                     <label htmlFor="quantity">Quantity</label>
                     <input id="quantity" name="quantity" type="number" min="1" max="3" value={this.state.quantity} onChange={this.changeHandler}/>
                     <button className="cart-update-btn">Update</button>
-                </form>
+                </form></>
+                :
+                null
+            }
             </div> 
         )
     }

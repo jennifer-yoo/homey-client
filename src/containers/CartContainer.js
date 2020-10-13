@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
 import CartCard from '../components/CartCard.js'
 import Payment from '../components/Payment'
-import { Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, NavLink, Switch } from 'react-router-dom';
 
 
 export default class CartContainer extends Component {
-
-    state = {
-        toggle: false
-    }
 
     renderItems = () => {
         let currentCart = [...this.props.info]
@@ -35,24 +31,42 @@ export default class CartContainer extends Component {
     }
 
     render() {    
-        console.log("in cart state:", this.props.info)
+        console.log("in cart state:", this.props.info, this.props.match)
         return(
-            <Switch>
-
-                
-            </Switch>
+            
             <div className="cart-container">
-                <div className="cart">
-                    {this.renderItems()}
-                </div>
-                <div className="order-info">
-                    {this.props.info.length === 0 ? 
-                        <p>There are no items in your cart</p>
-                        :
-                    <><p>Total: ${this.orderTotal()}</p>
-                    <button className="toggle-checkout" toggle={this.state.toggle} onClick={this.togglePayment}>Continue to Checkout</button></>
-                    }
-                </div>
+                <Router>
+                        {/* <Route path={this.props.match.url} render={() => 
+                        (console.log("this is my cart"),
+                        <><h2>Your Cart</h2>
+                            <div className="cart">
+                                {this.renderItems()}
+                            </div>
+                            <div className="order-info">
+                                {this.props.info.length === 0 ? 
+                                    <p>There are no items in your cart</p>
+                                    :
+                                    <><p>Total: ${this.orderTotal()}</p>
+                                    <Link to="/checkout">Continue to Checkout</Link></>
+                                }
+                            </div></>)
+                        } /> */}
+                            <>
+                            <h2>Your Cart</h2>
+                            <div className="cart">
+                                {this.renderItems()}
+                            </div>
+                            <div className="order-info">
+                                {this.props.info.length === 0 ? 
+                                    <p>There are no items in your cart</p>
+                                    :
+                                    <><p>Total: ${this.orderTotal()}</p>
+                                    <Link to="/checkout">Continue to Checkout</Link></>
+                                }
+                            </div></>
+
+                        <Route path="/checkout" render={(routerProps) => <Payment {...routerProps} order={this.props.order} />} />
+                </Router>
             </div>
         )
     }

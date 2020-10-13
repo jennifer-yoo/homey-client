@@ -196,7 +196,7 @@ class App extends Component {
         {/* <Route exact path='/' component={MainPage} /> */}
         <Route exact path='/design' component={Design} />
         <Route path='/products' render={(routerProps) => (<FurnitureContainer {...routerProps} info={this.state.data} addToCart={this.addToCart} /> )} />
-        <Route path='/cart' render={(routerProps) => (<CartContainer {...routerProps} info={this.state.cart} removeFromCart={this.removeFromCart} updateHandler={this.updateHandler} checkOut={this.checkOut}/> )} />
+        <Route path='/cart' render={(routerProps) => (<CartContainer {...routerProps} info={this.state.cart} removeFromCart={this.removeFromCart} updateHandler={this.updateHandler} checkOut={this.checkOut} order={this.state.order}/> )} />
       </Router> 
     );
   }
