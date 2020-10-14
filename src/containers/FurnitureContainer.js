@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import FurnitureMainCard from '../components/FurnitureMainCard'
 import FurnitureShow from '../components/FurnitureShow'
+import Search from '../components/Search'
 
 export default class FurnitureContainer extends Component {
 
@@ -15,6 +16,7 @@ export default class FurnitureContainer extends Component {
         const { info, changeHandler, addToCart } = this.props
         return (
             <div className="furniture-container">
+                <Search />
                 <Switch>
                     <Route path="/products/:id" render={(routerProps)=> {
                         let id = parseInt(routerProps.match.params.id)

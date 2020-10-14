@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import {CardElement} from '@stripe/react-stripe-js';
+
 
 export default class Payment extends Component {
 
@@ -32,9 +33,6 @@ export default class Payment extends Component {
 
                         <label htmlFor="email">Email Address</label>
                         <input id="email" name="email" type="email" value={this.state.email} onChange={this.changeHandler}/>
-
-                        <label htmlFor="address">Street Address</label>
-                        <input id="address" name="address" type="text" value={this.state.address} onChange={this.changeHandler}/>
 
                         <label htmlFor="address">Street Address</label>
                         <input id="address" name="address" type="text" value={this.state.address} onChange={this.changeHandler}/>
@@ -112,7 +110,8 @@ export default class Payment extends Component {
                 </div>
 
                 <div className="payment-container">
-                        <button className="checkout-btn" onClick={() => this.props.checkOut(this.orderTotal())}>Place your Order</button>
+                    <CardElement options={this.cardOptions()} />
+                    <button className="checkout-btn" type="submit" onClick={() => this.props.checkOut(this.orderTotal())}>Place your Order</button>
                 </div>
             </div>
         )

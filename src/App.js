@@ -7,6 +7,8 @@ import FurnitureContainer from './containers/FurnitureContainer'
 import NavBar from './Navbar.js'
 import CartContainer from './containers/CartContainer'
 import Payment from './components/Payment'
+import {Elements} from '@stripe/react-stripe-js';
+import {loadStripe} from '@stripe/stripe-js';
 
 class App extends Component {
 
@@ -21,9 +23,10 @@ class App extends Component {
     fetch('http://localhost:3001/furnitures')
     .then(resp => resp.json())
     .then(info => {
-        this.setState({data: info})
+      console.log(info)
+      this.setState({data: info})
     })
-
+    
     fetch('http://localhost:3001/orders', {
       method: 'POST',
       headers: {
@@ -36,6 +39,7 @@ class App extends Component {
     })
     .then(resp => resp.json())
     .then(data => {
+      console.log("post order:", data)
       this.setState({ orderId: data.id})
       localStorage.setItem("orderId", data.id)
     })
@@ -187,6 +191,10 @@ class App extends Component {
     })
   }
 
+  stripePromise = () => {
+    return loadStripe('pk_test_51Hbg3UEMlQgATMdomGZSHQOXmwpYxGN02K0oyw72Vw0oZORun9U5pXPacYdbdiYLlsoyHSxxarMbDvYXk6KBHJGA00hPzjVt4r');
+  }
+
   render() {
     console.log('in app cart state:', this.state.cart)
     console.log('in app order state:', this.state.order)
@@ -194,12 +202,14 @@ class App extends Component {
     return (
       <Router className="router"> 
         <NavBar />
-        {/* <Route exact path='/' component={MainPage} /> */}
+        <Route exact path='/' component={MainPage} />
         <Route exact path='/design' component={Design} />
         <Route path='/products' render={(routerProps) => (<FurnitureContainer {...routerProps} info={this.state.data} addToCart={this.addToCart} /> )} />
         <Route path='/cart' render={(routerProps) => (<CartContainer {...routerProps} info={this.state.cart} removeFromCart={this.removeFromCart} updateHandler={this.updateHandler} checkOut={this.checkOut} order={this.state.order}/> )} />
-        <Route path='/checkout' render={(routerProps) => (<Payment {...routerProps} order={this.state.order}/>)} />
-      </Router> 
+        <Elements stripe={this.stripePromise()}>
+          <Route path='/checkout' render={(routerProps) => (<Payment {...routerProps} order={this.state.order}/>)} />
+        </Elements> 
+      </Router>
     );
   }
 }

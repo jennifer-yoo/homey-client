@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CartCard from '../components/CartCard.js'
 import Payment from '../components/Payment'
-import { BrowserRouter as Router, Route, Link, NavLink, Switch } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 export default class CartContainer extends Component {
