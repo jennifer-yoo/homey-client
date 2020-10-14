@@ -3,6 +3,8 @@ import { Switch, Route } from 'react-router-dom';
 import FurnitureMainCard from '../components/FurnitureMainCard'
 import FurnitureShow from '../components/FurnitureShow'
 import Search from '../components/Search'
+import { Link } from 'react-router-dom';
+
 
 export default class FurnitureContainer extends Component {
 
@@ -13,10 +15,11 @@ export default class FurnitureContainer extends Component {
     }
     
     render() {
-        const { info, changeHandler, addToCart } = this.props
+        const { info, changeHandler, addToCart, filterHandler } = this.props
         return (
             <div className="furniture-container">
-                <Search />
+                <Link to="/search">Search</Link>
+                {/* <Route path='/search' render={(routerProps) => (<Search {...routerProps} filterHandler={filterHandler}/>)} /> */}
                 <Switch>
                     <Route path="/products/:id" render={(routerProps)=> {
                         let id = parseInt(routerProps.match.params.id)

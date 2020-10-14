@@ -110,7 +110,6 @@ export default class Payment extends Component {
                 </div>
 
                 <div className="payment-container">
-                    <CardElement options={this.cardOptions()} />
                     <button className="checkout-btn" type="submit" onClick={() => this.props.checkOut(this.orderTotal())}>Place your Order</button>
                 </div>
             </div>

@@ -7,6 +7,7 @@ import FurnitureContainer from './containers/FurnitureContainer'
 import NavBar from './Navbar.js'
 import CartContainer from './containers/CartContainer'
 import Payment from './components/Payment'
+import Search from './components/Search'
 import {Elements} from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';
 
@@ -16,7 +17,8 @@ class App extends Component {
     data: [],
     cart: [],
     orderId: null,
-    order: []
+    order: [],
+    search: []
   }
 
   componentDidMount () {
@@ -191,6 +193,27 @@ class App extends Component {
     })
   }
 
+  filterHandler = (e) => {
+    e.persist()
+    const items = [...this.state.data]
+
+    if (e.target.innerText === "Arm Chair") {
+      let searched = items.filter(el => el.category === "Armchair")
+      this.setState({ search: searched})
+    } else if (e.target.innerText === "Sofa") {
+      let searched = items.filter(el => el.category === "Sofa")
+      this.setState({ search: searched})
+    } else if (e.target.innerText === "Coffee Table") {
+      let searched = items.filter(el => el.category === "Coffee Table")
+      this.setState({ search: searched})
+    } else if (e.target.innerText === "Media Unit") {
+      let searched = items.filter(el => el.category === "Media Unit")
+      this.setState({ search: searched})
+    } else {
+      this.setState({ search: items})
+    }
+  }
+
   stripePromise = () => {
     return loadStripe('pk_test_51Hbg3UEMlQgATMdomGZSHQOXmwpYxGN02K0oyw72Vw0oZORun9U5pXPacYdbdiYLlsoyHSxxarMbDvYXk6KBHJGA00hPzjVt4r');
   }
@@ -204,7 +227,8 @@ class App extends Component {
         <NavBar />
         <Route exact path='/' component={MainPage} />
         <Route exact path='/design' component={Design} />
-        <Route path='/products' render={(routerProps) => (<FurnitureContainer {...routerProps} info={this.state.data} addToCart={this.addToCart} /> )} />
+        <Route path='/products' render={(routerProps) => (<FurnitureContainer {...routerProps} info={this.state.search} addToCart={this.addToCart} filterHandler={this.filterHandler} /> )} />
+        <Route path='/search' render={(routerProps) => (<Search {...routerProps} filterHandler={this.filterHandler}/>)} />
         <Route path='/cart' render={(routerProps) => (<CartContainer {...routerProps} info={this.state.cart} removeFromCart={this.removeFromCart} updateHandler={this.updateHandler} checkOut={this.checkOut} order={this.state.order}/> )} />
         <Elements stripe={this.stripePromise()}>
           <Route path='/checkout' render={(routerProps) => (<Payment {...routerProps} order={this.state.order}/>)} />
