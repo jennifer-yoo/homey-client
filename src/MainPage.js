@@ -114,7 +114,7 @@ export default function MainPage() {
             <Suspense fallback={null}>
             <HTMLContent
                 domContent={domContent}
-                bgColor='#FF5733'
+                bgColor='#FFFFFF'
                 modelPath='/armchairYellow.gltf'
                 position={250}>
                 <span>Make your house</span>

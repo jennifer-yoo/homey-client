@@ -1,24 +1,26 @@
-import React, {Component} from 'react';
-import { aidian } from '../images/aidian.png' // sofa
-import { aula } from '../images/aula.png' // table
-import { aveiro } from '../images/aveiro.png' // media
-import { belgrave } from '../images/belgrave.png' // media
-import { boone } from '../images/boone.png' // media
-import { flippa } from '../images/flippa.png' // table
-import frameBlue from '../images/frameBlue.png' // chair
+import React from 'react';
+import { NavLink , useRouteMatch} from 'react-router-dom';
+
+import aidian from '../images/aidian.png' // sofa
 import haruLightBlue from '../images/haruLightBlue.png' //sofa
+import flippa from '../images/flippa.png' // table
+import aula from '../images/aula.png' // table
+import aveiro from '../images/aveiro.png' // media
+import belgrave from '../images/belgrave.png' // media
+import boone from '../images/boone.png' // media
+import frameBlue from '../images/frameBlue.png' // chair
 import ivanChair from '../images/ivanChair.png' // chair
 import simone from '../images/simone.png' // chair
 
-export default class Search extends Component {
+export default function Search(props) {
 
-    state = {
-        isHovering: false
-    }
+    // React.useEffect(() => {
+    //     console.log("rerendering in searcg")
+    // }, [])
 
-    hoverHandler = (e) => {
+    const hoverHandler = (e) => {
         e.persist()
-        this.setState((previousState) => ({isHovering: !previousState.isHovering}))
+        // this.setState((previousState) => ({isHovering: !previousState.isHovering}))
 
         if (e.target.innerText === "Arm Chair") {
             let images = [{frameBlue}, {ivanChair}, {simone}]
@@ -45,12 +47,42 @@ export default class Search extends Component {
         // )
     }
 
-    render () {
-        const { filterHandler } = this.props
+    // const styles = {};
 
-        return (
-            <div className="search-container">
-                <div className="search-header">
+    // styles.search = {
+
+    // }
+    
+    const { filterHandler } = props
+    let { path } = useRouteMatch()
+    console.log("url in search:", path)
+    //onMouseOver={(e) => this.hoverHandler(e)} onMouseLeave={(e) => this.hoverHandler(e)}
+
+    return (
+        <div className="search-links">
+                <NavLink to="/products" onClick={(e) => filterHandler(e)}>All</NavLink>
+                <NavLink to="/products" onClick={(e) => filterHandler(e)}>Arm Chair</NavLink>
+                <NavLink to="/products" onClick={(e) => filterHandler(e)}>Sofa</NavLink>
+                <NavLink to="/products" onClick={(e) => filterHandler(e)}>Coffee Table</NavLink>
+                <NavLink to="/products" onClick={(e) => filterHandler(e)}>Media Unit</NavLink>
+            
+            {/* 
+                <p name="all" onClick={(e) => filterHandler(e)}>All</p>
+                <p name="armChair" onClick={(e) => filterHandler(e)}>Arm Chair</p>
+                <p name="sofa" onClick={(e) => filterHandler(e)}>Sofa</p>
+                <p name="coffeeTable" onClick={(e) => filterHandler(e)}>Coffee Table</p>
+                <p name="mediaUnit" onClick={(e) => filterHandler(e)}>Media Unit</p> */}
+            {/* <div className="filter-pic-container">
+                { this.state.isHovering 
+                    && 
+                    <><img className="filter-pic1" alt="filter-preview" src={frameBlue}></img>
+                    <img className="filter-pic2" alt="filter-preview" src={ivanChair}></img>
+                    <img className="filter-pic3" alt="filter-preview" src={simone}></img></>
+                }
+            </div> */}
+
+            {/* {toggle ? 
+                <><div className="search-header">
                     <p name="all" onClick={(e) => filterHandler(e)}>All</p>
                     <p name="armChair" onClick={(e) => filterHandler(e)} onMouseOver={(e) => this.hoverHandler(e)} onMouseLeave={(e) => this.hoverHandler(e)}>Arm Chair</p>
                     <p name="sofa" onClick={(e) => filterHandler(e)}>Sofa</p>
@@ -64,10 +96,13 @@ export default class Search extends Component {
                         <img className="filter-pic2" alt="filter-preview" src={ivanChair}></img>
                         <img className="filter-pic3" alt="filter-preview" src={simone}></img></>
                     }
-                </div>
-            </div>
-        )
-    }
+                </div></>
+                :
+                null
+            } */}
+        </div>
+
+    )
 }
 
 //export default Search;
