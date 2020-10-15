@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+
 
 export default class FurnitureShow extends Component {
 
     state = {
         quantity: 1
+    }
+
+    model = (url) => {
+        const gltf = useGLTFLoader(url, true);
+        return <primitive object={gltf.scene} dispose={null} />;
     }
 
     changeHandler = (event) => {
