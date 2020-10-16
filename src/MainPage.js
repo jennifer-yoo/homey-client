@@ -101,7 +101,7 @@ export default function MainPage() {
     const scrollArea = useRef();
     // const onScroll = (e) => (state.top.current = e.target.scrollTop);
     // useEffect(() => void onScroll({ target: scrollArea.current }), []);
-
+    
     return (
         <div className="main-container">
           {/* R3F Canvas */}

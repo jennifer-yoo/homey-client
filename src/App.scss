@@ -112,6 +112,8 @@ header {
         flex-wrap: wrap;
         justify-content: center;
         padding: 40px;
+        width: 600px;
+        height: 600px;
     }
     .item-card {
         display: flex;
@@ -132,9 +134,11 @@ header {
         margin: auto;
         
         .show-info {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+            // width: 500px;
+            margin: auto;
             .text-info {
                 .text-name {
                     letter-spacing: 2px;

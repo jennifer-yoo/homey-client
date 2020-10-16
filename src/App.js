@@ -230,9 +230,9 @@ class App extends Component {
         <Route path='/products' render={(routerProps) => (<FurnitureContainer {...routerProps} info={this.state.search} addToCart={this.addToCart} filterHandler={this.filterHandler} /> )} />
         <Route path='/search' render={(routerProps) => (<Search {...routerProps} filterHandler={this.filterHandler}/>)} />
         <Route path='/cart' render={(routerProps) => (<CartContainer {...routerProps} info={this.state.cart} removeFromCart={this.removeFromCart} updateHandler={this.updateHandler} checkOut={this.checkOut} order={this.state.order}/> )} />
-        <Elements stripe={this.stripePromise()}>
+        {/* <Elements stripe={this.stripePromise()}> */}
           <Route path='/checkout' render={(routerProps) => (<Payment {...routerProps} order={this.state.order}/>)} />
-        </Elements> 
+        {/* </Elements>  */}
       </Router>
     );
   }

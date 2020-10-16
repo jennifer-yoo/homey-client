@@ -291,13 +291,13 @@
   ],
   "images": [
     {
-      "uri": "textures/FLOOR_baseColor.png"
+      "uri": "texturesAidianCompressed/FLOOR_baseColor.png"
     },
     {
-      "uri": "textures/FABRIC_metallicRoughness.png"
+      "uri": "texturesAidianCompressed/FABRIC_metallicRoughness.png"
     },
     {
-      "uri": "textures/FABRIC_baseColor.jpeg"
+      "uri": "texturesAidianCompressed/FABRIC_baseColor.jpeg"
     }
   ],
   "materials": [

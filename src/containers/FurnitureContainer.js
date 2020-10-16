@@ -45,14 +45,13 @@ export default class FurnitureContainer extends Component {
                 } */}
                     {/* <Link to="/search">Search</Link> */}
                         {/* <Route path='/search' render={(routerProps) => (<Search {...routerProps} filterHandler={filterHandler}/>)} /> */}
-                    <div className="furniture-items">
+                    <div className="furniture-items" >
                         <Switch>
                             <Route path="/products/:id" render={(routerProps)=> {
                                 let id = parseInt(routerProps.match.params.id)
                                 let foundItem = info.find((el) => el.id === id)
                                 return <FurnitureShow info={foundItem} addToCart={addToCart} changeHandler={changeHandler}/>
                             }} />
-
                             <Route path="/products" render={() => this.renderItems()} />
                         </Switch>
                     </div>
