@@ -412,18 +412,18 @@
   "buffers": [
     {
       "byteLength": 1226992,
-      "uri": "scene.bin"
+      "uri": "mobyGreen.bin"
     }
   ],
   "images": [
     {
-      "uri": "textures/EnvironmentAmbientLight_baseColor.jpeg"
+      "uri": "texturesMobyGreenCompressed/EnvironmentAmbientLight_baseColor.jpeg"
     },
     {
-      "uri": "textures/VELVET_1_baseColor.jpeg"
+      "uri": "texturesMobyGreenCompressed/VELVET_1_baseColor.jpeg"
     },
     {
-      "uri": "textures/FLOOR_baseColor.png"
+      "uri": "texturesMobyGreenCompressed/FLOOR_baseColor.png"
     }
   ],
   "materials": [

@@ -10,6 +10,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.20.0",
     "drei": "^1.5.7",
     "gltf-webpack-loader": "^1.0.6",
     "lerp": "^1.0.3",
@@ -20,6 +21,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "react-spring": "^8.0.27",
+    "react-stripe-checkout": "^2.6.3",
     "react-three-fiber": "^5.0.3",
     "three": "^0.121.1",
     "three-orbitcontrols": "^2.110.3"

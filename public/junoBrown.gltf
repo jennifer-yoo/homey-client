@@ -81,24 +81,24 @@
       "bufferView": 2,
       "byteOffset": 96,
       "componentType": 5126,
-      "count": 3240,
+      "count": 32622,
       "max": [
-        125.69554138183594,
-        20.083709716796875,
-        -50.835765838623047
+        151.99995422363281,
+        43.999992370605469,
+        66.000030517578125
       ],
       "min": [
-        22.870323181152344,
-        -40.083705902099609,
-        -80.533767700195312
+        -152.00001525878906,
+        -44,
+        2.3217461109161377
       ],
       "type": "VEC3"
     },
     {
       "bufferView": 2,
-      "byteOffset": 38976,
+      "byteOffset": 391560,
       "componentType": 5126,
-      "count": 3240,
+      "count": 32622,
       "max": [
         1,
         1,
@@ -115,17 +115,17 @@
       "bufferView": 3,
       "byteOffset": 64,
       "componentType": 5126,
-      "count": 3240,
+      "count": 32622,
       "max": [
         1,
         1,
-        1,
+        0.99999982118606567,
         1
       ],
       "min": [
         -1,
         -1,
-        -1,
+        -0.99999982118606567,
         -1
       ],
       "type": "VEC4"
@@ -134,10 +134,10 @@
       "bufferView": 1,
       "byteOffset": 32,
       "componentType": 5126,
-      "count": 3240,
+      "count": 32622,
       "max": [
         0.99950003623962402,
-        0.96666610240936279
+        0.9963759183883667
       ],
       "min": [
         0.00050000002374872565,
@@ -146,27 +146,12 @@
       "type": "VEC2"
     },
     {
-      "bufferView": 1,
-      "byteOffset": 25952,
-      "componentType": 5126,
-      "count": 3240,
-      "max": [
-        1.0627299547195435,
-        0.69395899772644043
-      ],
-      "min": [
-        -0.10603398084640503,
-        -0.17024567723274231
-      ],
-      "type": "VEC2"
-    },
-    {
       "bufferView": 0,
       "byteOffset": 24,
       "componentType": 5125,
-      "count": 7968,
+      "count": 176808,
       "max": [
-        3239
+        32621
       ],
       "min": [
         0
@@ -175,109 +160,79 @@
     },
     {
       "bufferView": 2,
-      "byteOffset": 77856,
+      "byteOffset": 783024,
       "componentType": 5126,
-      "count": 3232,
+      "count": 2640,
       "max": [
-        108.31988525390625,
-        18.658174514770508,
-        -80.090057373046875
+        149.24769592285156,
+        41.622222900390625,
+        3.7753503322601318
       ],
       "min": [
-        37.063873291015625,
-        -40.001434326171875,
-        -89.610076904296875
+        -149.24771118164062,
+        -40.678318023681641,
+        -3.4332275390625e-05
       ],
       "type": "VEC3"
     },
     {
       "bufferView": 2,
-      "byteOffset": 116640,
+      "byteOffset": 814704,
       "componentType": 5126,
-      "count": 3232,
+      "count": 2640,
       "max": [
-        0.99999904632568359,
-        0.99999827146530151,
-        1
+        1,
+        1,
+        7.5746305810753256e-05
       ],
       "min": [
-        -0.99999916553497314,
-        -0.99999827146530151,
+        -1,
+        -1,
         -1
       ],
       "type": "VEC3"
     },
     {
       "bufferView": 3,
-      "byteOffset": 51904,
+      "byteOffset": 522016,
       "componentType": 5126,
-      "count": 3232,
+      "count": 2640,
       "max": [
-        0.99999833106994629,
         1,
         1,
+        0.99661988019943237,
         1
       ],
       "min": [
         -1,
         -1,
-        -1,
-        -1
+        -0.99663048982620239,
+        1
       ],
       "type": "VEC4"
     },
     {
       "bufferView": 1,
-      "byteOffset": 51872,
+      "byteOffset": 261008,
       "componentType": 5126,
-      "count": 3232,
+      "count": 2640,
       "max": [
-        1.3394746780395508,
-        0.5871734619140625
+        0.94964903593063354,
+        0.81233566999435425
       ],
       "min": [
-        0.30036768317222595,
-        -0.032967910170555115
-      ],
-      "type": "VEC2"
-    },
-    {
-      "bufferView": 1,
-      "byteOffset": 77728,
-      "componentType": 5126,
-      "count": 3232,
-      "max": [
-        0.94559705257415771,
-        0.92143964767456055
-      ],
-      "min": [
-        0.23309144377708435,
-        0.00050000002374872565
-      ],
-      "type": "VEC2"
-    },
-    {
-      "bufferView": 1,
-      "byteOffset": 103584,
-      "componentType": 5126,
-      "count": 3232,
-      "max": [
-        0.94559705257415771,
-        0.92143964767456055
-      ],
-      "min": [
-        0.23309144377708435,
-        0.00050000002374872565
+        0.22788006067276001,
+        0.69211435317993164
       ],
       "type": "VEC2"
     },
     {
       "bufferView": 0,
-      "byteOffset": 31896,
+      "byteOffset": 707256,
       "componentType": 5125,
-      "count": 11184,
+      "count": 7776,
       "max": [
-        3231
+        2639
       ],
       "min": [
         0
@@ -289,40 +244,40 @@
     "extras": {
       "author": "MADE.COM (https://sketchfab.com/made-it)",
       "license": "CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)",
-      "source": "https://sketchfab.com/3d-models/esme-coffee-table-with-2-drawers-white-and-ash-66943d6d54064452b5ecb9151dcc181c",
-      "title": "Esme Coffee Table With 2 Drawers, White And Ash"
+      "source": "https://sketchfab.com/3d-models/juno-4-seater-modular-sofa-brown-leather-70fe3ac6629c4b73bfeb7edca5ec85be",
+      "title": "Juno 4 Seater Modular Sofa, Brown Leather"
     },
-    "generator": "Sketchfab-5.29.0",
+    "generator": "Sketchfab-5.86.0",
     "version": "2.0"
   },
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 76632,
+      "byteLength": 738360,
       "byteOffset": 0,
       "name": "floatBufferViews",
       "target": 34963
     },
     {
       "buffer": 0,
-      "byteLength": 129440,
-      "byteOffset": 76632,
+      "byteLength": 282128,
+      "byteOffset": 738360,
       "byteStride": 8,
       "name": "floatBufferViews",
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 155424,
-      "byteOffset": 206072,
+      "byteLength": 846384,
+      "byteOffset": 1020488,
       "byteStride": 12,
       "name": "floatBufferViews",
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 103616,
-      "byteOffset": 361496,
+      "byteLength": 564256,
+      "byteOffset": 1866872,
       "byteStride": 16,
       "name": "floatBufferViews",
       "target": 34962
@@ -330,22 +285,16 @@
   ],
   "buffers": [
     {
-      "byteLength": 465112,
-      "uri": "scene.bin"
+      "byteLength": 2431128,
+      "uri": "junoBrown.bin"
     }
   ],
   "images": [
     {
-      "uri": "textures/WHITE_metallicRoughness.png"
+      "uri": "texturesJunoBrownCompressed/shadow_baseColor.png"
     },
     {
-      "uri": "textures/FLOOR_baseColor.png"
-    },
-    {
-      "uri": "textures/material_baseColor.jpeg"
-    },
-    {
-      "uri": "textures/material_metallicRoughness.png"
+      "uri": "texturesJunoBrownCompressed/leather_baseColor.jpeg"
     }
   ],
   "materials": [
@@ -357,20 +306,43 @@
         0,
         0
       ],
-      "name": "FLOOR",
+      "name": "shadow",
       "pbrMetallicRoughness": {
         "baseColorFactor": [
-          0,
-          0,
-          0,
-          0.79439786590000006
+          1,
+          1,
+          1,
+          0.60537347560975607
+        ],
+        "baseColorTexture": {
+          "index": 0,
+          "texCoord": 0
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 0.89297135964975516
+      }
+    },
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "name": "leather",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
         ],
         "baseColorTexture": {
           "index": 1,
           "texCoord": 0
         },
-        "metallicFactor": 0,
-        "roughnessFactor": 1
+        "metallicFactor": 0.32488567073170732,
+        "roughnessFactor": 0.43121189024390238
       }
     },
     {
@@ -380,59 +352,22 @@
         0,
         0
       ],
-      "name": "WHITE",
-      "occlusionTexture": {
-        "index": 0,
-        "strength": 0.58708079270000002,
-        "texCoord": 0
-      },
+      "name": "black",
       "pbrMetallicRoughness": {
         "baseColorFactor": [
-          0.92156899999999997,
-          0.92156899999999997,
-          0.92156899999999997,
+          0.011764699999999999,
+          0.011764699999999999,
+          0.011764699999999999,
           1
         ],
         "metallicFactor": 0,
-        "metallicRoughnessTexture": {
-          "index": 0,
-          "texCoord": 0
-        },
-        "roughnessFactor": 0.13586128049999999
-      }
-    },
-    {
-      "doubleSided": true,
-      "emissiveFactor": [
-        0,
-        0,
-        0
-      ],
-      "name": "material",
-      "occlusionTexture": {
-        "index": 3,
-        "strength": 1,
-        "texCoord": 1
-      },
-      "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          1,
-          1,
-          1,
-          1
-        ],
-        "baseColorTexture": {
-          "index": 2,
-          "texCoord": 0
-        },
-        "metallicFactor": 0,
-        "roughnessFactor": 0.52610518289999997
+        "roughnessFactor": 0.89297135964975516
       }
     }
   ],
   "meshes": [
     {
-      "name": "Plane001_FLOOR_0",
+      "name": "shadow_plane_shadow_0",
       "primitives": [
         {
           "attributes": {
@@ -448,35 +383,32 @@
       ]
     },
     {
-      "name": "Esme_Coffee_Table_with_2_Drawers_Ash_WHITE_0",
+      "name": "seat_leather_0",
       "primitives": [
         {
           "attributes": {
             "NORMAL": 6,
             "POSITION": 5,
             "TANGENT": 7,
-            "TEXCOORD_0": 8,
-            "TEXCOORD_1": 9
+            "TEXCOORD_0": 8
           },
-          "indices": 10,
+          "indices": 9,
           "material": 1,
           "mode": 4
         }
       ]
     },
     {
-      "name": "Esme_Coffee_Table_with_2_Drawers_Ash_ASH_0",
+      "name": "legs_black_0",
       "primitives": [
         {
           "attributes": {
-            "NORMAL": 12,
-            "POSITION": 11,
-            "TANGENT": 13,
-            "TEXCOORD_0": 14,
-            "TEXCOORD_1": 15,
-            "TEXCOORD_2": 16
+            "NORMAL": 11,
+            "POSITION": 10,
+            "TANGENT": 12,
+            "TEXCOORD_0": 13
           },
-          "indices": 17,
+          "indices": 14,
           "material": 2,
           "mode": 4
         }
@@ -500,6 +432,24 @@
       "children": [
         2
       ],
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        -2.832769343193999e-16,
+        0,
+        0,
+        2.832769343193999e-16,
+        -1,
+        0,
+        0,
+        -0.0002593994140625,
+        -66.000190734863281,
+        1
+      ],
       "name": "RootNode (model correction matrix)"
     },
     {
@@ -512,8 +462,9 @@
         0,
         0,
         0,
+        -1,
         0,
-        1,
+        0,
         0,
         0,
         -1,
@@ -521,15 +472,15 @@
         0,
         0,
         0,
-        0,
         1
       ],
-      "name": "8bbc74b8330249ba99b8939c4b3f05fe.fbx"
+      "name": "50e0d3fdcd824f8298ba763d0579846e.fbx"
     },
     {
       "children": [
         4,
-        6
+        6,
+        9
       ],
       "name": "RootNode"
     },
@@ -537,58 +488,21 @@
       "children": [
         5
       ],
-      "matrix": [
-        1,
-        0,
-        0,
-        0,
-        0,
-        2.2204460492503131e-16,
-        -1,
-        0,
-        0,
-        1,
-        2.2204460492503131e-16,
-        0,
-        0,
-        0,
-        0,
-        1
-      ],
-      "name": "Plane001"
+      "name": "shadow_plane"
     },
     {
       "mesh": 0,
-      "name": "Plane001_FLOOR_0"
+      "name": "shadow_plane_shadow_0"
     },
     {
       "children": [
         7
       ],
-      "matrix": [
-        1.1701555252075195,
-        0,
-        0,
-        0,
-        0,
-        2.2204460492503131e-16,
-        -1,
-        0,
-        0,
-        1.1701555252075195,
-        2.5982672129554619e-16,
-        0,
-        0,
-        22.581563949584961,
-        0,
-        1
-      ],
-      "name": "Esme_Coffee_Table_with_2_Drawers_Ash"
+      "name": "seat"
     },
     {
       "children": [
-        8,
-        9
+        8
       ],
       "matrix": [
         1,
@@ -603,20 +517,50 @@
         0,
         1,
         0,
-        -74.282928466796875,
-        9.9999971389770508,
-        70.222923278808594,
+        3.0517578125e-05,
+        3.814697265625e-06,
+        3.4332275390625e-05,
         1
       ],
       "name": ""
     },
     {
       "mesh": 1,
-      "name": "Esme_Coffee_Table_with_2_Drawers_Ash_WHITE_0"
+      "name": "seat_leather_0"
+    },
+    {
+      "children": [
+        10
+      ],
+      "name": "legs"
+    },
+    {
+      "children": [
+        11
+      ],
+      "matrix": [
+        1,
+        0,
+        -0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        3.0517578125e-05,
+        3.814697265625e-06,
+        3.4332275390625e-05,
+        1
+      ],
+      "name": ""
     },
     {
       "mesh": 2,
-      "name": "Esme_Coffee_Table_with_2_Drawers_Ash_ASH_0"
+      "name": "legs_black_0"
     }
   ],
   "samplers": [
@@ -644,14 +588,6 @@
     {
       "sampler": 0,
       "source": 1
-    },
-    {
-      "sampler": 0,
-      "source": 2
-    },
-    {
-      "sampler": 0,
-      "source": 3
     }
   ]
 }

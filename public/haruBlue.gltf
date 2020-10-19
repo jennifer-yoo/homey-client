@@ -547,15 +547,15 @@
   "buffers": [
     {
       "byteLength": 4468592,
-      "uri": "scene.bin"
+      "uri": "haruBlue.bin"
     }
   ],
   "images": [
     {
-      "uri": "textures/FLOOR_baseColor.png"
+      "uri": "texturesHaruBlueCompressed/FLOOR_baseColor.png"
     },
     {
-      "uri": "textures/BLACK_FABRIC_baseColor.jpeg"
+      "uri": "texturesHaruBlueCompressed/BLACK_FABRIC_baseColor.jpeg"
     }
   ],
   "materials": [

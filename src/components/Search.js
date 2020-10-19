@@ -2,12 +2,13 @@ import React from 'react';
 import { NavLink , useRouteMatch} from 'react-router-dom';
 
 import aidian from '../images/aidian.png' // sofa
-import haruLightBlue from '../images/haruLightBlue.png' //sofa
+import monterosso from '../images/monterosso.png' //sofa
 import flippa from '../images/flippa.png' // table
-import aula from '../images/aula.png' // table
-import aveiro from '../images/aveiro.png' // media
-import belgrave from '../images/belgrave.png' // media
+import esme from '../images/esme.png' // media
 import boone from '../images/boone.png' // media
+import hooperBrown from '../images/hooperBrown.png' // table
+import kameko from '../images/kameko.png' // table
+import mobyGreen from '../images/mobyGreen.png' // sofa
 import frameBlue from '../images/frameBlue.png' // chair
 import ivanChair from '../images/ivanChair.png' // chair
 import simone from '../images/simone.png' // chair

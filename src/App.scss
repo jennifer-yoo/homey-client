@@ -160,6 +160,11 @@ header {
     }
 }
 
+.3d-show {
+    border: 1px black solid;
+    width: 500px;
+    height: 500px;
+}
 
 .home-container {
     position: absolute;
@@ -241,4 +246,28 @@ input {
     background: rgb(223, 223, 223);
     border: 1px solid rgb(223, 223, 223);
     padding: 5px 5px;
+}
+
+.loading {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 80%;
+  height: 80%;
+  background: #171717;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.loading-bar-container {
+  width: 50%;
+  height: 32px;
+  background: #272727;
+}
+
+.loading-bar {
+  height: 32px;
+  background: #f15946;
 }

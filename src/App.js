@@ -8,8 +8,10 @@ import NavBar from './Navbar.js'
 import CartContainer from './containers/CartContainer'
 import Payment from './components/Payment'
 import Search from './components/Search'
-import {Elements} from '@stripe/react-stripe-js';
+import Account from './containers/Account'
+import {Elements, ElementsConsumer } from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';
+
 
 class App extends Component {
 
@@ -42,7 +44,6 @@ class App extends Component {
     .then(resp => resp.json())
     .then(data => {
       console.log("post order:", data)
-      this.setState({ orderId: data.id})
       localStorage.setItem("orderId", data.id)
     })
   }
@@ -166,13 +167,14 @@ class App extends Component {
     }
   }
 
+
+
   checkOut = (totalAmount) => {
     const orderId = localStorage.getItem("orderId")
-
     let trackingNum = "";
-    let possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    let possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZJFDFDSKJFLDSJFSDJDSF012345678900000000000000000000000";
     
-    for (let i = 0; i < 12; i++) {
+    for (let i = 0; i < 15; i++) {
       trackingNum += possible.charAt(Math.floor(Math.random() * possible.length));
     }
     
@@ -189,7 +191,7 @@ class App extends Component {
     })
     .then(resp => resp.json())
     .then(data => {
-      this.setState({ order: data })        
+      this.setState({ order: data })      
     })
   }
 
@@ -224,15 +226,22 @@ class App extends Component {
 
     return (
       <Router className="router"> 
-        <NavBar />
-        <Route exact path='/' component={MainPage} />
-        <Route exact path='/design' component={Design} />
-        <Route path='/products' render={(routerProps) => (<FurnitureContainer {...routerProps} info={this.state.search} addToCart={this.addToCart} filterHandler={this.filterHandler} /> )} />
-        <Route path='/search' render={(routerProps) => (<Search {...routerProps} filterHandler={this.filterHandler}/>)} />
-        <Route path='/cart' render={(routerProps) => (<CartContainer {...routerProps} info={this.state.cart} removeFromCart={this.removeFromCart} updateHandler={this.updateHandler} checkOut={this.checkOut} order={this.state.order}/> )} />
-        {/* <Elements stripe={this.stripePromise()}> */}
-          <Route path='/checkout' render={(routerProps) => (<Payment {...routerProps} order={this.state.order}/>)} />
-        {/* </Elements>  */}
+        <Elements stripe={this.stripePromise()}>
+          <NavBar />
+          <Route exact path='/' component={MainPage} />
+          <Route exact path='/design' component={Design} />
+          <Route path='/products' render={(routerProps) => (<FurnitureContainer {...routerProps} info={this.state.search} addToCart={this.addToCart} filterHandler={this.filterHandler} /> )} />
+          <Route path='/search' render={(routerProps) => (<Search {...routerProps} filterHandler={this.filterHandler}/>)} />
+          <Route path='/cart' render={(routerProps) => (<CartContainer {...routerProps} info={this.state.cart} removeFromCart={this.removeFromCart} updateHandler={this.updateHandler} checkOut={this.checkOut} order={this.state.order}/> )} />
+          <Route path='/checkout' render={(routerProps) => (
+              <ElementsConsumer>
+                {({stripe, elements}) => (
+                  <Payment {...routerProps} stripe={stripe} elements={elements} order={this.state.cart} checkOut={this.checkOut} orderTotal={this.state.orderTotal}/>
+                )}
+              </ElementsConsumer>
+            )} />
+          <Route path='/my-account' render={(routerProps) => (<Account {...routerProps} order={this.state.order}/> )} />
+        </Elements> 
       </Router>
     );
   }

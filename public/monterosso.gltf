@@ -3,102 +3,24 @@
     {
       "bufferView": 2,
       "componentType": 5126,
-      "count": 4,
+      "count": 52189,
       "max": [
-        167.02890014648438,
-        167.02890014648438,
-        0
+        171.68359375,
+        117.54499816894531,
+        84.198623657226562
       ],
       "min": [
-        -167.02890014648438,
-        -167.02890014648438,
-        0
+        -171.68359375,
+        -117.54499816894531,
+        15.822669982910156
       ],
       "type": "VEC3"
     },
     {
       "bufferView": 2,
-      "byteOffset": 48,
+      "byteOffset": 626268,
       "componentType": 5126,
-      "count": 4,
-      "max": [
-        0,
-        0,
-        1
-      ],
-      "min": [
-        0,
-        0,
-        1
-      ],
-      "type": "VEC3"
-    },
-    {
-      "bufferView": 3,
-      "componentType": 5126,
-      "count": 4,
-      "max": [
-        1,
-        0,
-        0,
-        1
-      ],
-      "min": [
-        1,
-        0,
-        0,
-        1
-      ],
-      "type": "VEC4"
-    },
-    {
-      "bufferView": 1,
-      "componentType": 5126,
-      "count": 4,
-      "max": [
-        1,
-        1
-      ],
-      "min": [
-        0,
-        0
-      ],
-      "type": "VEC2"
-    },
-    {
-      "bufferView": 0,
-      "componentType": 5125,
-      "count": 6,
-      "max": [
-        3
-      ],
-      "min": [
-        0
-      ],
-      "type": "SCALAR"
-    },
-    {
-      "bufferView": 2,
-      "byteOffset": 96,
-      "componentType": 5126,
-      "count": 25946,
-      "max": [
-        188.47386169433594,
-        79.658134460449219,
-        76.566482543945312
-      ],
-      "min": [
-        -55.708797454833984,
-        -76.2353515625,
-        -12.038886070251465
-      ],
-      "type": "VEC3"
-    },
-    {
-      "bufferView": 2,
-      "byteOffset": 311448,
-      "componentType": 5126,
-      "count": 25946,
+      "count": 52189,
       "max": [
         1,
         1,
@@ -113,126 +35,234 @@
     },
     {
       "bufferView": 3,
-      "byteOffset": 64,
       "componentType": 5126,
-      "count": 25946,
+      "count": 52189,
       "max": [
         1,
         1,
-        1,
+        0.99999964237213135,
         1
       ],
       "min": [
         -1,
         -1,
-        -0.99999880790710449,
+        -0.9999997615814209,
         -1
       ],
       "type": "VEC4"
     },
     {
       "bufferView": 1,
-      "byteOffset": 32,
       "componentType": 5126,
-      "count": 25946,
+      "count": 52189,
       "max": [
-        5.2189021110534668,
+        0.99039721488952637,
         0.99949997663497925
       ],
       "min": [
-        0.00050000002374872565,
-        -6.0375838279724121
-      ],
-      "type": "VEC2"
-    },
-    {
-      "bufferView": 0,
-      "byteOffset": 24,
-      "componentType": 5125,
-      "count": 142020,
-      "max": [
-        25945
-      ],
-      "min": [
-        0
-      ],
-      "type": "SCALAR"
-    },
-    {
-      "bufferView": 2,
-      "byteOffset": 622800,
-      "componentType": 5126,
-      "count": 2510,
-      "max": [
-        181.21299743652344,
-        75.748519897460938,
-        -7.7298460006713867
-      ],
-      "min": [
-        -46.937526702880859,
-        -71.244461059570312,
-        -16.904010772705078
-      ],
-      "type": "VEC3"
-    },
-    {
-      "bufferView": 2,
-      "byteOffset": 652920,
-      "componentType": 5126,
-      "count": 2510,
-      "max": [
-        1,
-        0.98982149362564087,
-        1
-      ],
-      "min": [
-        -1,
-        -0.98982149362564087,
-        -1
-      ],
-      "type": "VEC3"
-    },
-    {
-      "bufferView": 3,
-      "byteOffset": 415200,
-      "componentType": 5126,
-      "count": 2510,
-      "max": [
-        0.99552065134048462,
-        1,
-        0.99828320741653442,
-        1
-      ],
-      "min": [
-        -0.99980652332305908,
-        -1,
-        -1,
-        -1
-      ],
-      "type": "VEC4"
-    },
-    {
-      "bufferView": 1,
-      "byteOffset": 207600,
-      "componentType": 5126,
-      "count": 2510,
-      "max": [
-        0.74793499708175659,
-        0.80394500494003296
-      ],
-      "min": [
-        0.16852900385856628,
+        0.0098550915718078613,
         0.00050000002374872565
       ],
       "type": "VEC2"
     },
     {
-      "bufferView": 0,
-      "byteOffset": 568104,
-      "componentType": 5125,
-      "count": 12900,
+      "bufferView": 1,
+      "byteOffset": 417512,
+      "componentType": 5126,
+      "count": 52189,
       "max": [
-        2509
+        17.960329055786133,
+        17.914800643920898
+      ],
+      "min": [
+        0.028417559340596199,
+        0.032335720956325531
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 288480,
+      "max": [
+        52188
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 1252536,
+      "componentType": 5126,
+      "count": 4206,
+      "max": [
+        167.96110534667969,
+        116.02220153808594,
+        16.119489669799805
+      ],
+      "min": [
+        -164.91690063476562,
+        -109.25150299072266,
+        -0.13928790390491486
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 1303008,
+      "componentType": 5126,
+      "count": 4206,
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 835024,
+      "componentType": 5126,
+      "count": 4206,
+      "max": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "min": [
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 835024,
+      "componentType": 5126,
+      "count": 4206,
+      "max": [
+        0.99039721488952637,
+        0.9836801290512085
+      ],
+      "min": [
+        0.00050002301577478647,
+        0.00050000002374872565
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 868672,
+      "componentType": 5126,
+      "count": 4206,
+      "max": [
+        21.373519897460938,
+        17.895790100097656
+      ],
+      "min": [
+        19.828279495239258,
+        15.992650032043457
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 1153920,
+      "componentType": 5125,
+      "count": 7920,
+      "max": [
+        4205
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 1353480,
+      "componentType": 5126,
+      "count": 4,
+      "max": [
+        167.02890014648438,
+        167.02890014648438,
+        0
+      ],
+      "min": [
+        -167.02890014648438,
+        -167.02890014648438,
+        0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 1353528,
+      "componentType": 5126,
+      "count": 4,
+      "max": [
+        0,
+        0,
+        1
+      ],
+      "min": [
+        0,
+        0,
+        1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 902320,
+      "componentType": 5126,
+      "count": 4,
+      "max": [
+        1,
+        2.3841872121010965e-07,
+        0,
+        1
+      ],
+      "min": [
+        1,
+        1.7881399116959074e-07,
+        0,
+        1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 902320,
+      "componentType": 5126,
+      "count": 4,
+      "max": [
+        1,
+        1
+      ],
+      "min": [
+        2.98022992950564e-08,
+        2.98022992950564e-08
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 1185600,
+      "componentType": 5125,
+      "count": 6,
+      "max": [
+        3
       ],
       "min": [
         0
@@ -244,40 +274,40 @@
     "extras": {
       "author": "MADE.COM (https://sketchfab.com/made-it)",
       "license": "CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)",
-      "source": "https://sketchfab.com/3d-models/aidian-corner-storage-sofa-bed-013f0f138a004cb48160f03fcf103a1c",
-      "title": "Aidian Corner Storage Sofa Bed"
+      "source": "https://sketchfab.com/3d-models/monterosso-right-hand-corner-sofa-storm-blue-4685abdbd4684535a8e3005233198603",
+      "title": "Monterosso Right Hand Corner Sofa, Storm Blue"
     },
-    "generator": "Sketchfab-5.29.0",
+    "generator": "Sketchfab-4.47.0",
     "version": "2.0"
   },
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 619704,
+      "byteLength": 1185624,
       "byteOffset": 0,
       "name": "floatBufferViews",
       "target": 34963
     },
     {
       "buffer": 0,
-      "byteLength": 227680,
-      "byteOffset": 619704,
+      "byteLength": 902352,
+      "byteOffset": 1185624,
       "byteStride": 8,
       "name": "floatBufferViews",
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 683040,
-      "byteOffset": 847384,
+      "byteLength": 1353576,
+      "byteOffset": 2087976,
       "byteStride": 12,
       "name": "floatBufferViews",
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 455360,
-      "byteOffset": 1530424,
+      "byteLength": 902384,
+      "byteOffset": 3441552,
       "byteStride": 16,
       "name": "floatBufferViews",
       "target": 34962
@@ -285,69 +315,19 @@
   ],
   "buffers": [
     {
-      "byteLength": 1985784,
-      "uri": "aidian.bin"
+      "byteLength": 4343936,
+      "uri": "monterosso.bin"
     }
   ],
   "images": [
     {
-      "uri": "texturesAidianCompressed/FLOOR_baseColor.png"
+      "uri": "texturesMonterossoCompressed/FABRIC_baseColor.jpeg"
     },
     {
-      "uri": "texturesAidianCompressed/FABRIC_metallicRoughness.png"
-    },
-    {
-      "uri": "texturesAidianCompressed/FABRIC_baseColor.jpeg"
+      "uri": "texturesMonterossoCompressed/FLOOR_baseColor.png"
     }
   ],
   "materials": [
-    {
-      "doubleSided": true,
-      "emissiveFactor": [
-        0,
-        0,
-        0
-      ],
-      "name": "FABRIC",
-      "occlusionTexture": {
-        "index": 1,
-        "strength": 0.62976371949999999,
-        "texCoord": 0
-      },
-      "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          1,
-          1,
-          1,
-          1
-        ],
-        "baseColorTexture": {
-          "index": 2,
-          "texCoord": 0
-        },
-        "metallicFactor": 0,
-        "roughnessFactor": 0.99075958119999996
-      }
-    },
-    {
-      "doubleSided": true,
-      "emissiveFactor": [
-        0,
-        0,
-        0
-      ],
-      "name": "BLACK",
-      "pbrMetallicRoughness": {
-        "baseColorFactor": [
-          0.0039220000000000001,
-          0.0039220000000000001,
-          0.0039220000000000001,
-          1
-        ],
-        "metallicFactor": 0,
-        "roughnessFactor": 0.30049542680000002
-      }
-    },
     {
       "alphaMode": "BLEND",
       "doubleSided": true,
@@ -359,9 +339,32 @@
       "name": "FLOOR",
       "pbrMetallicRoughness": {
         "baseColorFactor": [
-          0.144423018264,
-          0.144423018264,
-          0.144423018264,
+          0.35260612689999998,
+          0.35260612689999998,
+          0.35260612689999998,
+          1
+        ],
+        "baseColorTexture": {
+          "index": 1,
+          "texCoord": 0
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 1
+      }
+    },
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        0.00062395295256239517,
+        0.00050273373190515074,
+        0.0015564085232695046
+      ],
+      "name": "FABRIC",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.66025152440000001,
+          0.66025152440000001,
+          0.66025152440000001,
           1
         ],
         "baseColorTexture": {
@@ -371,53 +374,74 @@
         "metallicFactor": 0,
         "roughnessFactor": 1
       }
+    },
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "name": "EnvironmentAmbientLight",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.38586128050000001,
+          0.38586128050000001,
+          0.38586128050000001,
+          1
+        ],
+        "metallicFactor": 1,
+        "roughnessFactor": 0.0443978659
+      }
     }
   ],
   "meshes": [
     {
-      "name": "FLOOR",
+      "name": "FABRIC",
       "primitives": [
         {
           "attributes": {
             "NORMAL": 1,
             "POSITION": 0,
             "TANGENT": 2,
-            "TEXCOORD_0": 3
+            "TEXCOORD_0": 3,
+            "TEXCOORD_1": 4
           },
-          "indices": 4,
+          "indices": 5,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "CHROME",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 7,
+            "POSITION": 6,
+            "TANGENT": 8,
+            "TEXCOORD_0": 9,
+            "TEXCOORD_1": 10
+          },
+          "indices": 11,
           "material": 2,
           "mode": 4
         }
       ]
     },
     {
-      "name": "FABRIC",
+      "name": "FLOOR",
       "primitives": [
         {
           "attributes": {
-            "NORMAL": 6,
-            "POSITION": 5,
-            "TANGENT": 7,
-            "TEXCOORD_0": 8
+            "NORMAL": 13,
+            "POSITION": 12,
+            "TANGENT": 14,
+            "TEXCOORD_0": 15
           },
-          "indices": 9,
+          "indices": 16,
           "material": 0,
-          "mode": 4
-        }
-      ]
-    },
-    {
-      "name": "BLACK",
-      "primitives": [
-        {
-          "attributes": {
-            "NORMAL": 11,
-            "POSITION": 10,
-            "TANGENT": 12,
-            "TEXCOORD_0": 13
-          },
-          "indices": 14,
-          "material": 1,
           "mode": 4
         }
       ]
@@ -445,6 +469,14 @@
     {
       "children": [
         3,
+        6,
+        8
+      ],
+      "name": "Collada visual scene group"
+    },
+    {
+      "children": [
+        4,
         5
       ],
       "matrix": [
@@ -453,36 +485,44 @@
         0,
         0,
         0,
-        -4.3711390063094768e-08,
-        0.999999999999999,
-        0,
-        0,
-        -0.999999999999999,
-        -4.3711390063094768e-08,
+        1,
         0,
         0,
         0,
         0,
+        1,
+        0,
+        0,
+        0,
+        0.20525479316711426,
         1
       ],
-      "name": "Collada visual scene group"
+      "name": "Monterosso_Right_Hand_Facing_Corner_Sofa"
+    },
+    {
+      "mesh": 0,
+      "name": "FABRIC"
+    },
+    {
+      "mesh": 1,
+      "name": "CHROME"
     },
     {
       "children": [
-        4
+        7
       ],
       "matrix": [
-        1,
+        2,
         0,
         0,
         0,
         0,
-        2.2204460492503131e-16,
-        -1,
+        2,
         0,
         0,
-        1,
-        2.2204460492503131e-16,
+        0,
+        0,
+        2,
         0,
         0,
         0,
@@ -492,65 +532,17 @@
       "name": "Plane001"
     },
     {
-      "mesh": 0,
+      "mesh": 2,
       "name": "FLOOR"
     },
     {
       "children": [
-        6
+        9
       ],
-      "matrix": [
-        1,
-        0,
-        0,
-        0,
-        0,
-        2.2204460492503131e-16,
-        -1,
-        0,
-        0,
-        1,
-        2.2204460492503131e-16,
-        0,
-        0,
-        0,
-        0,
-        1
-      ],
-      "name": "Aidian_Corner_Storage_Sofa_Bed_Fabric_SilverGrey"
+      "name": "EnvironmentAmbientLight"
     },
     {
-      "children": [
-        7,
-        8
-      ],
-      "matrix": [
-        1,
-        0,
-        0,
-        0,
-        0,
-        1,
-        0,
-        0,
-        0,
-        0,
-        1,
-        0,
-        -66.382530212402344,
-        -1.7113909721374512,
-        16.904010772705078,
-        1
-      ],
-      "name": "Aidian_Corner_Storage_Sofa_Bed_Fabric_SilverGrey-Pivot"
-    },
-    {
-      "mesh": 1,
-      "name": "FABRIC"
-    },
-    {
-      "mesh": 2,
-      "name": "BLACK"
+      "name": "EnvironmentAmbientLight"
     }
   ],
   "samplers": [
@@ -578,10 +570,6 @@
     {
       "sampler": 0,
       "source": 1
-    },
-    {
-      "sampler": 0,
-      "source": 2
     }
   ]
 }

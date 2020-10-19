@@ -3,6 +3,195 @@
     {
       "bufferView": 2,
       "componentType": 5126,
+      "count": 36136,
+      "max": [
+        2.4957680702209473,
+        48.380729675292969,
+        1.347417950630188
+      ],
+      "min": [
+        -96.487228393554688,
+        -17.874790191650391,
+        -97.153717041015625
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 433632,
+      "componentType": 5126,
+      "count": 36136,
+      "max": [
+        0.99985873699188232,
+        0.99999964237213135,
+        0.99999988079071045
+      ],
+      "min": [
+        -0.99983412027359009,
+        -1,
+        -0.99999743700027466
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 36136,
+      "max": [
+        0.99999994039535522,
+        0.99977284669876099,
+        0.99999105930328369,
+        1
+      ],
+      "min": [
+        -0.99999994039535522,
+        -0.99994117021560669,
+        -0.99999451637268066,
+        -1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 36136,
+      "max": [
+        0.99949997663497925,
+        0.99453181028366089
+      ],
+      "min": [
+        0.00050000002374872565,
+        0.00050000002374872565
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 289088,
+      "componentType": 5126,
+      "count": 36136,
+      "max": [
+        6.9860000610351562,
+        6.4882011413574219
+      ],
+      "min": [
+        0.014000000432133675,
+        0.014000000432133675
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 201768,
+      "max": [
+        36135
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 867264,
+      "componentType": 5126,
+      "count": 308,
+      "max": [
+        -13.972519874572754,
+        -16.89093017578125,
+        -5.298130989074707
+      ],
+      "min": [
+        -79.861396789550781,
+        -18.423910140991211,
+        -79.292800903320312
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 870960,
+      "componentType": 5126,
+      "count": 308,
+      "max": [
+        0.93222349882125854,
+        1,
+        0.91806149482727051
+      ],
+      "min": [
+        -0.93222349882125854,
+        -1,
+        -0.91806179285049438
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 578176,
+      "componentType": 5126,
+      "count": 308,
+      "max": [
+        1,
+        0.059366852045059204,
+        0.99994206428527832,
+        1
+      ],
+      "min": [
+        -0.98681110143661499,
+        -0.059365417808294296,
+        -0.9998699426651001,
+        -1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 578176,
+      "componentType": 5126,
+      "count": 308,
+      "max": [
+        0.057465199381113052,
+        0.072788253426551819
+      ],
+      "min": [
+        0.00050000002374872565,
+        0.00050001498311758041
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 580640,
+      "componentType": 5126,
+      "count": 308,
+      "max": [
+        0.97222220897674561,
+        1
+      ],
+      "min": [
+        -0.027777789160609245,
+        0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 807072,
+      "componentType": 5125,
+      "count": 840,
+      "max": [
+        307
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 874656,
+      "componentType": 5126,
       "count": 4,
       "max": [
         167.02890014648438,
@@ -18,7 +207,7 @@
     },
     {
       "bufferView": 2,
-      "byteOffset": 48,
+      "byteOffset": 874704,
       "componentType": 5126,
       "count": 4,
       "max": [
@@ -35,6 +224,7 @@
     },
     {
       "bufferView": 3,
+      "byteOffset": 583104,
       "componentType": 5126,
       "count": 4,
       "max": [
@@ -53,6 +243,7 @@
     },
     {
       "bufferView": 1,
+      "byteOffset": 583104,
       "componentType": 5126,
       "count": 4,
       "max": [
@@ -67,172 +258,11 @@
     },
     {
       "bufferView": 0,
+      "byteOffset": 810432,
       "componentType": 5125,
       "count": 6,
       "max": [
         3
-      ],
-      "min": [
-        0
-      ],
-      "type": "SCALAR"
-    },
-    {
-      "bufferView": 2,
-      "byteOffset": 96,
-      "componentType": 5126,
-      "count": 11470,
-      "max": [
-        37.860149383544922,
-        44.209468841552734,
-        82.431381225585938
-      ],
-      "min": [
-        -37.849250793457031,
-        -43.035190582275391,
-        28.012779235839844
-      ],
-      "type": "VEC3"
-    },
-    {
-      "bufferView": 2,
-      "byteOffset": 137736,
-      "componentType": 5126,
-      "count": 11470,
-      "max": [
-        0.99971872568130493,
-        0.99998277425765991,
-        1
-      ],
-      "min": [
-        -0.99983543157577515,
-        -1,
-        -0.99999642372131348
-      ],
-      "type": "VEC3"
-    },
-    {
-      "bufferView": 3,
-      "byteOffset": 64,
-      "componentType": 5126,
-      "count": 11470,
-      "max": [
-        1,
-        0.99974000453948975,
-        0.99931395053863525,
-        1
-      ],
-      "min": [
-        -0.99999964237213135,
-        -0.99998080730438232,
-        -0.99937212467193604,
-        1
-      ],
-      "type": "VEC4"
-    },
-    {
-      "bufferView": 1,
-      "byteOffset": 32,
-      "componentType": 5126,
-      "count": 11470,
-      "max": [
-        0.98537451028823853,
-        0.98416221141815186
-      ],
-      "min": [
-        0.0054015219211578369,
-        0.00050000002374872565
-      ],
-      "type": "VEC2"
-    },
-    {
-      "bufferView": 0,
-      "byteOffset": 24,
-      "componentType": 5125,
-      "count": 65184,
-      "max": [
-        11469
-      ],
-      "min": [
-        0
-      ],
-      "type": "SCALAR"
-    },
-    {
-      "bufferView": 2,
-      "byteOffset": 275376,
-      "componentType": 5126,
-      "count": 3622,
-      "max": [
-        39.941268920898438,
-        43.739799499511719,
-        73.878166198730469
-      ],
-      "min": [
-        -39.941268920898438,
-        -40.414558410644531,
-        -0.053104881197214127
-      ],
-      "type": "VEC3"
-    },
-    {
-      "bufferView": 2,
-      "byteOffset": 318840,
-      "componentType": 5126,
-      "count": 3622,
-      "max": [
-        0.99982619285583496,
-        1,
-        1
-      ],
-      "min": [
-        -0.99982619285583496,
-        -1,
-        -1
-      ],
-      "type": "VEC3"
-    },
-    {
-      "bufferView": 3,
-      "byteOffset": 183584,
-      "componentType": 5126,
-      "count": 3622,
-      "max": [
-        0.99997049570083618,
-        0.99986159801483154,
-        0.99996554851531982,
-        1
-      ],
-      "min": [
-        -0.99997049570083618,
-        -0.99999356269836426,
-        -0.99999725818634033,
-        -1
-      ],
-      "type": "VEC4"
-    },
-    {
-      "bufferView": 1,
-      "byteOffset": 91792,
-      "componentType": 5126,
-      "count": 3622,
-      "max": [
-        0.99949997663497925,
-        0.97390902042388916
-      ],
-      "min": [
-        0.00050000002374872565,
-        0.00050000002374872565
-      ],
-      "type": "VEC2"
-    },
-    {
-      "bufferView": 0,
-      "byteOffset": 260760,
-      "componentType": 5125,
-      "count": 18180,
-      "max": [
-        3621
       ],
       "min": [
         0
@@ -244,8 +274,8 @@
     "extras": {
       "author": "MADE.COM (https://sketchfab.com/made-it)",
       "license": "CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)",
-      "source": "https://sketchfab.com/3d-models/frame-armchair-claret-cotton-velvet-4e336dfe9e1a4d95bd7d6c2b94d03ab3",
-      "title": "Frame Armchair, Claret Cotton Velvet"
+      "source": "https://sketchfab.com/3d-models/ivan-armchair-marl-grey-a90953ee97b24f54a3b2818306ae737f",
+      "title": "Ivan Armchair, Marl Grey"
     },
     "generator": "Sketchfab-4.47.0",
     "version": "2.0"
@@ -253,31 +283,31 @@
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 333480,
+      "byteLength": 810456,
       "byteOffset": 0,
       "name": "floatBufferViews",
       "target": 34963
     },
     {
       "buffer": 0,
-      "byteLength": 120768,
-      "byteOffset": 333480,
+      "byteLength": 583136,
+      "byteOffset": 810456,
       "byteStride": 8,
       "name": "floatBufferViews",
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 362304,
-      "byteOffset": 454248,
+      "byteLength": 874752,
+      "byteOffset": 1393592,
       "byteStride": 12,
       "name": "floatBufferViews",
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 241536,
-      "byteOffset": 816552,
+      "byteLength": 583168,
+      "byteOffset": 2268344,
       "byteStride": 16,
       "name": "floatBufferViews",
       "target": 34962
@@ -285,39 +315,37 @@
   ],
   "buffers": [
     {
-      "byteLength": 1058088,
-      "uri": "scene.bin"
+      "byteLength": 2851512,
+      "uri": "ivanChair.bin"
     }
   ],
   "images": [
     {
-      "uri": "textures/BRASS_baseColor.jpeg"
+      "uri": "texturesIvanChairCompressed/FLOOR_baseColor.png"
     },
     {
-      "uri": "textures/EnvironmentAmbientLight_baseColor.png"
-    },
-    {
-      "uri": "textures/VELVET_baseColor.jpeg"
+      "uri": "texturesIvanChairCompressed/FABRIC_baseColor.jpeg"
     }
   ],
   "materials": [
     {
+      "alphaMode": "BLEND",
       "doubleSided": true,
       "emissiveFactor": [
         0,
         0,
         0
       ],
-      "name": "VELVET",
+      "name": "FLOOR",
       "pbrMetallicRoughness": {
         "baseColorFactor": [
-          1,
-          1,
-          1,
+          0.25171493900000003,
+          0.25171493900000003,
+          0.25171493900000003,
           1
         ],
         "baseColorTexture": {
-          "index": 2,
+          "index": 0,
           "texCoord": 0
         },
         "metallicFactor": 0,
@@ -331,7 +359,7 @@
         0,
         0
       ],
-      "name": "BRASS",
+      "name": "FABRIC",
       "pbrMetallicRoughness": {
         "baseColorFactor": [
           1,
@@ -340,15 +368,14 @@
           1
         ],
         "baseColorTexture": {
-          "index": 0,
+          "index": 1,
           "texCoord": 0
         },
-        "metallicFactor": 1,
-        "roughnessFactor": 0
+        "metallicFactor": 0,
+        "roughnessFactor": 0.96022397260000003
       }
     },
     {
-      "alphaMode": "BLEND",
       "doubleSided": true,
       "emissiveFactor": [
         0,
@@ -358,65 +385,63 @@
       "name": "EnvironmentAmbientLight",
       "pbrMetallicRoughness": {
         "baseColorFactor": [
-          0.14083765245479998,
-          0.14083765245479998,
-          0.14083765245479998,
+          1,
+          1,
+          1,
           1
         ],
-        "baseColorTexture": {
-          "index": 1,
-          "texCoord": 0
-        },
         "metallicFactor": 0,
-        "roughnessFactor": 1
+        "roughnessFactor": 0.95074147649999996
       }
     }
   ],
   "meshes": [
     {
-      "name": "FLOOR",
+      "name": "FABRIC",
       "primitives": [
         {
           "attributes": {
             "NORMAL": 1,
             "POSITION": 0,
             "TANGENT": 2,
-            "TEXCOORD_0": 3
+            "TEXCOORD_0": 3,
+            "TEXCOORD_1": 4
           },
-          "indices": 4,
+          "indices": 5,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "BLACK",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 7,
+            "POSITION": 6,
+            "TANGENT": 8,
+            "TEXCOORD_0": 9,
+            "TEXCOORD_1": 10
+          },
+          "indices": 11,
           "material": 2,
           "mode": 4
         }
       ]
     },
     {
-      "name": "VELVET",
+      "name": "FLOOR",
       "primitives": [
         {
           "attributes": {
-            "NORMAL": 6,
-            "POSITION": 5,
-            "TANGENT": 7,
-            "TEXCOORD_0": 8
+            "NORMAL": 13,
+            "POSITION": 12,
+            "TANGENT": 14,
+            "TEXCOORD_0": 15
           },
-          "indices": 9,
+          "indices": 16,
           "material": 0,
-          "mode": 4
-        }
-      ]
-    },
-    {
-      "name": "BRASS",
-      "primitives": [
-        {
-          "attributes": {
-            "NORMAL": 11,
-            "POSITION": 10,
-            "TANGENT": 12,
-            "TEXCOORD_0": 13
-          },
-          "indices": 14,
-          "material": 1,
           "mode": 4
         }
       ]
@@ -444,7 +469,7 @@
     {
       "children": [
         3,
-        5,
+        7,
         9
       ],
       "name": "Collada visual scene group"
@@ -453,50 +478,68 @@
       "children": [
         4
       ],
-      "name": "Plane001"
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        -1.6292100000000001e-07,
+        1,
+        0,
+        0,
+        -1,
+        -1.6292100000000001e-07,
+        0,
+        0,
+        0,
+        0.066404340000000006,
+        1
+      ],
+      "name": "Ivan_Armchair"
+    },
+    {
+      "children": [
+        5,
+        6
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        46.995730000000002,
+        18.423909999999999,
+        47.90334,
+        1
+      ],
+      "name": ""
     },
     {
       "mesh": 0,
-      "name": "FLOOR"
-    },
-    {
-      "children": [
-        6
-      ],
-      "name": "Frame_Armchair_Brass_Frame"
-    },
-    {
-      "children": [
-        7,
-        8
-      ],
-      "matrix": [
-        0.98848179999999997,
-        0,
-        0,
-        0,
-        0,
-        0.98848179999999997,
-        0,
-        0,
-        0,
-        0,
-        1.011652,
-        0,
-        0,
-        0,
-        0.053104400000000003,
-        1
-      ],
-      "name": "Frame_Armchair_Brass_Frame"
+      "name": "FABRIC"
     },
     {
       "mesh": 1,
-      "name": "VELVET"
+      "name": "BLACK"
+    },
+    {
+      "children": [
+        8
+      ],
+      "name": "Plane001"
     },
     {
       "mesh": 2,
-      "name": "BRASS"
+      "name": "FLOOR"
     },
     {
       "children": [
@@ -533,10 +576,6 @@
     {
       "sampler": 0,
       "source": 1
-    },
-    {
-      "sampler": 0,
-      "source": 2
     }
   ]
 }

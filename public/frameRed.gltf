@@ -244,8 +244,8 @@
     "extras": {
       "author": "MADE.COM (https://sketchfab.com/made-it)",
       "license": "CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)",
-      "source": "https://sketchfab.com/3d-models/frame-armchairpetrol-velvet-with-gold-frame-c51c5fa46df0420f910771c661c204ba",
-      "title": "Frame Armchair,Petrol Velvet with Gold Frame"
+      "source": "https://sketchfab.com/3d-models/frame-armchair-claret-cotton-velvet-4e336dfe9e1a4d95bd7d6c2b94d03ab3",
+      "title": "Frame Armchair, Claret Cotton Velvet"
     },
     "generator": "Sketchfab-4.47.0",
     "version": "2.0"
@@ -286,18 +286,18 @@
   "buffers": [
     {
       "byteLength": 1058088,
-      "uri": "scene.bin"
+      "uri": "frameRed.bin"
     }
   ],
   "images": [
     {
-      "uri": "textures/EnvironmentAmbientLight_baseColor.png"
+      "uri": "texturesFrameRedCompressed/BRASS_baseColor.jpeg"
     },
     {
-      "uri": "textures/VELVET_baseColor.jpeg"
+      "uri": "texturesFrameRedCompressed/EnvironmentAmbientLight_baseColor.png"
     },
     {
-      "uri": "textures/BRASS_baseColor.jpeg"
+      "uri": "texturesFrameRedCompressed/VELVET_baseColor.jpeg"
     }
   ],
   "materials": [
@@ -317,7 +317,7 @@
           1
         ],
         "baseColorTexture": {
-          "index": 1,
+          "index": 2,
           "texCoord": 0
         },
         "metallicFactor": 0,
@@ -327,9 +327,9 @@
     {
       "doubleSided": true,
       "emissiveFactor": [
-        0.078125,
-        0.050829069085937498,
-        0.023458576789062501
+        0,
+        0,
+        0
       ],
       "name": "BRASS",
       "pbrMetallicRoughness": {
@@ -340,7 +340,7 @@
           1
         ],
         "baseColorTexture": {
-          "index": 2,
+          "index": 0,
           "texCoord": 0
         },
         "metallicFactor": 1,
@@ -358,13 +358,13 @@
       "name": "EnvironmentAmbientLight",
       "pbrMetallicRoughness": {
         "baseColorFactor": [
-          0.22688643293399999,
-          0.22688643293399999,
-          0.22688643293399999,
+          0.14083765245479998,
+          0.14083765245479998,
+          0.14083765245479998,
           1
         ],
         "baseColorTexture": {
-          "index": 0,
+          "index": 1,
           "texCoord": 0
         },
         "metallicFactor": 0,
