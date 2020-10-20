@@ -30,19 +30,24 @@ function CartContainer(props) {
 
     return (
         <div className="cart-container">
-                <><h2>Your Cart</h2>
-                    <div className="cart">
-                        {renderItems()}
-                    </div>
-                    <div className="order-info">
-                        {props.info.length === 0 ? 
-                            <p>There are no items in your cart</p>
-                            :
-                            <><p>Total: ${orderTotal()}</p>
-                            <Link to="/checkout">Continue to Checkout</Link></>
-                        }
-                </div></>
+            <><div className="cart">
+                <p className="cart-header">Your Cart</p>
+                {renderItems()}
             </div>
+            <div className="order-info">
+                {props.info.length === 0 ? 
+                <p className="empty-cart-message">There are no items in your cart</p>
+                :
+                <div className="order-details">
+                    <p className="cart-order-header">Order Information</p>
+                    <div className="cart-checkout">
+                        <p className="cart-total">Total: ${orderTotal()}</p>
+                        <button><Link to="/checkout">Checkout</Link></button>
+                    </div>
+                </div>
+                }
+            </div></>
+        </div>
     )
 }
 

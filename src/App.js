@@ -186,7 +186,8 @@ class App extends Component {
       },
       body: JSON.stringify({
         total: totalAmount,
-        tracking: trackingNum
+        tracking: trackingNum,
+        status: true
       })
     })
     .then(resp => resp.json())

@@ -26,15 +26,19 @@ export default class CartCard extends Component {
             
             <div className="cart-item">
             {info ? 
-                <><img className="card-pic" src={info.furniture.image} alt={info.furniture.name}></img>
-                <p>{info.furniture.name}</p>
-                <p>${info.furniture.price}</p>
-                <button className="cart-remove-btn" onClick={() => removeFromCart(info)}>Remove</button>
-                <form className="update-form" onSubmit={(event) => updateHandler(info, event, this.state.quantity)}>
-                    <label htmlFor="quantity">Quantity</label>
-                    <input id="quantity" name="quantity" type="number" min="1" max="3" value={this.state.quantity} onChange={this.changeHandler}/>
-                    <button className="cart-update-btn">Update</button>
-                </form></>
+                <><div className="cart-item-sec1">
+                    <img className="cart-pic" src={info.furniture.image} alt={info.furniture.name}></img>
+                    <p>{info.furniture.name}</p>
+                    <p>${info.furniture.price}</p>
+                </div>
+                <div className="cart-item-sec2">
+                    <form className="update-form" onSubmit={(event) => updateHandler(info, event, this.state.quantity)}>
+                        <label htmlFor="quantity">Quantity:</label>
+                        <input id="quantity" name="quantity" type="number" min="1" max="3" value={this.state.quantity} onChange={this.changeHandler}/>
+                        <button className="cart-update-btn">Update</button>
+                    </form>
+                    <button className="cart-remove-btn" onClick={() => removeFromCart(info)}>Remove</button>
+                </div></>
                 :
                 null
             }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { CardElement, useStripe, useElements, ElementsConsumer } from "@stripe/react-stripe-js";
 import { Redirect } from 'react-router-dom'
+import SuccessModal from '../components/SuccessModal'
 
 class Payment extends Component {
 
@@ -12,7 +13,8 @@ class Payment extends Component {
         city: "",
         usState: "",
         zip: "",
-        status: false
+        status: false,
+        modal: false
     }
 
     changeHandler = (event) => {
@@ -56,10 +58,17 @@ class Payment extends Component {
             if (result.paymentIntent.status === 'succeeded') {
                 console.log("success")
                 this.props.checkOut(this.orderTotal())
+                this.setState((previousState) => ({modal: !previousState.modal}))
                 this.setState((previousState) => ({status: !previousState.status}))
+                this.props.history.push('/my-account')
+                // console.log("in submit payment:", this.props.history)
             }
         }
     }
+
+    // redirect = () => {
+    //     return <Redirect to="/my-account" />
+    // }
 
     render() {
         console.log("in payment:", this.props.order)
@@ -86,7 +95,9 @@ class Payment extends Component {
         return (
             <div className="checkout-container">
                 { this.state.status ? 
-                    <Redirect to="/my-account" />
+                null
+                    // <><SuccessModal show={this.state.modal} onHide={()=> this.setState((previousState) => ({modal: !previousState.modal}))}/>
+                    // <Redirect to="/my-account" />
                     :
                     <><div className="billing-container">
                         <h2>Billing</h2>

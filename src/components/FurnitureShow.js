@@ -1,16 +1,13 @@
 import React, { Component, useState, useRef, Suspense } from 'react';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
-// import { TransformControls } from 'three/examples/jsm/controls/TransformControls.js'
 
-import { Html, useProgress, useGLTFLoader } from "drei";
+import { useProgress, useGLTFLoader } from "drei";
 import { Canvas,extend,useThree,useFrame, useLoader} from "react-three-fiber";
 import { a, useTransition } from "@react-spring/web";
 
-import { useInView } from "react-intersection-observer";
 
-
-function Model({url}) { //LOADING GLTF FILE FROM SRC FOLDER
+function Model({url}) { //LOADING GLTF FILE FROM PUBLIC FOLDER
     const gltf = useLoader(GLTFLoader, url)
 
     return <primitive object={gltf.scene} position={[0, -10, 10]} />
@@ -36,7 +33,6 @@ function Loader() {
 }
 
 extend({ OrbitControls })
-
 const Controls = () => {
     const { camera, gl: {domElement} } = useThree()
     const controls = useRef()
@@ -107,13 +103,16 @@ function FurnitureShow(props) {
         <div className="show-card">
             {info ? 
                 <div className="show-info">
-                    <Render url={info.threeD} />
+                    <div className="3d-container">
+                        <Render url={info.threeD} />
+                    </div>
                     <div className="text-info">
                         <p className="text-name">{info.name}</p>
                         <p>${info.price}</p>
-                        <p>{info.rating} out of 5</p>
+                        <p>Color: {info.color}</p>
+                        <p>{info.description}</p>
                         <form className="add-form" onSubmit={(event) => addToCart(info, event, quantity)}>
-                            <label htmlFor="quantity">Quantity</label>
+                            <label htmlFor="quantity">Quantity:</label>
                             <input id="quantity" name="quantity" type="number" min="1" max="3" value={quantity} onChange={(event) => changeHandler(event)}/>
                             <button className="add-cart-btn" type="submit">Add to Cart</button>
                         </form>
