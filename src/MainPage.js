@@ -117,8 +117,8 @@ export default function MainPage() {
                 bgColor='#FFFFFF'
                 modelPath='/armchairYellow.gltf'
                 position={250}>
-                <span>Make your house</span>
-                <span>your home</span>
+                <span>HOMEY</span>
+                <span>Make yourself feel at home</span>
             </HTMLContent>
             {/* <HTMLContent
                 domContent={domContent}

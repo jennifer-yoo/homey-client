@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import "./App.scss";
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import MainPage from './MainPage'
-import Design from './components/Design'
 import FurnitureContainer from './containers/FurnitureContainer'
 import NavBar from './Navbar.js'
 import CartContainer from './containers/CartContainer'
@@ -230,7 +229,6 @@ class App extends Component {
         <Elements stripe={this.stripePromise()}>
           <NavBar />
           <Route exact path='/' component={MainPage} />
-          <Route exact path='/design' component={Design} />
           <Route path='/products' render={(routerProps) => (<FurnitureContainer {...routerProps} info={this.state.search} addToCart={this.addToCart} filterHandler={this.filterHandler} /> )} />
           <Route path='/search' render={(routerProps) => (<Search {...routerProps} filterHandler={this.filterHandler}/>)} />
           <Route path='/cart' render={(routerProps) => (<CartContainer {...routerProps} info={this.state.cart} removeFromCart={this.removeFromCart} updateHandler={this.updateHandler} checkOut={this.checkOut} order={this.state.order}/> )} />

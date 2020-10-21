@@ -7,6 +7,10 @@ body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   letter-spacing: .01875rem;
   transition: 0.4s ease-in-out;
+  /* background-image: url("/white tile.jpg");
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: cover;  */
 }
 
 html,
