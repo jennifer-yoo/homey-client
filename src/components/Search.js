@@ -56,7 +56,6 @@ export default function Search(props) {
     
     const { filterHandler } = props
     let { path } = useRouteMatch()
-    console.log("url in search:", path)
     //onMouseOver={(e) => this.hoverHandler(e)} onMouseLeave={(e) => this.hoverHandler(e)}
 
     return (

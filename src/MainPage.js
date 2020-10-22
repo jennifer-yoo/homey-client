@@ -4,7 +4,7 @@ import "./App.scss";
 import { Section } from "./components/Section";
 
 // Page State
-import state from "./components/state";
+// import state from "./components/state";
 
 // R3F
 import { Canvas, useFrame } from "react-three-fiber";
@@ -108,17 +108,17 @@ export default function MainPage() {
         <Canvas
             concurrent
             colorManagement
-            camera={{ position: [0, 0, 120], fov: 70 }}>
+            camera={{ position: [0, 15, 120], fov: 70 }}>
             {/* Lights Component */}
             <Lights />
             <Suspense fallback={null}>
             <HTMLContent
                 domContent={domContent}
                 bgColor='#FFFFFF'
-                modelPath='/armchairYellow.gltf'
-                position={250}>
-                <span>HOMEY</span>
-                <span>Make yourself feel at home</span>
+                modelPath='/armchairGray.gltf'
+                position={275}>
+                {/* <span>HOMEY.</span> */}
+                <span>make yourself feel at home</span>
             </HTMLContent>
             {/* <HTMLContent
                 domContent={domContent}
@@ -139,7 +139,7 @@ export default function MainPage() {
             </HTMLContent> */}
             </Suspense>
         </Canvas>
-        {/* <Loader /> */}
+        <Loader />
         {/* <div
             className='scrollArea'
             ref={scrollArea}
